@@ -3,14 +3,15 @@ package com.stoptheballs.model.entities;
 
 import java.util.List;
 
+import org.metatransapps.commons.app.Application_Base;
+import org.metatransapps.commons.graphics2d.model.World;
+import org.metatransapps.commons.graphics2d.model.entities.Entity2D_Challenger;
+import org.metatransapps.commons.graphics2d.model.entities.Entity2D_Ground;
+import org.metatransapps.commons.graphics2d.model.entities.IEntity2D;
+
 import android.graphics.Canvas;
 import android.graphics.RectF;
 
-import com.apps.mobile.android.commons.app.Application_Base;
-import com.apps.mobile.android.commons.graphics2d.model.World;
-import com.apps.mobile.android.commons.graphics2d.model.entities.Entity2D_Challenger;
-import com.apps.mobile.android.commons.graphics2d.model.entities.Entity2D_Ground;
-import com.apps.mobile.android.commons.graphics2d.model.entities.IEntity2D;
 import com.stoptheballs.model.GameData_StopTheBalls;
 
 

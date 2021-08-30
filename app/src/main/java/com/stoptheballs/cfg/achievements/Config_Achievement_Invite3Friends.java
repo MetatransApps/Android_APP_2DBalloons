@@ -1,7 +1,8 @@
 package com.stoptheballs.cfg.achievements;
 
 
-import com.apps.mobile.android.commons.cfg.achievements.Config_Achievement_Base;
+import org.metatransapps.commons.cfg.achievements.Config_Achievement_Base;
+
 import com.stoptheballs.lib.R;
 
 

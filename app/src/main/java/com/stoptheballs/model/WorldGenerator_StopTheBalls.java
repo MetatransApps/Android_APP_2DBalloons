@@ -3,14 +3,15 @@ package com.stoptheballs.model;
 
 import java.util.Random;
 
+import org.metatransapps.commons.app.Application_Base;
+import org.metatransapps.commons.cfg.colours.ConfigurationUtils_Colours;
+import org.metatransapps.commons.graphics2d.model.World;
+import org.metatransapps.commons.ui.utils.ScreenUtils;
+
 import android.content.Context;
 import android.graphics.Color;
 import android.graphics.RectF;
 
-import com.apps.mobile.android.commons.app.Application_Base;
-import com.apps.mobile.android.commons.cfg.colours.ConfigurationUtils_Colours;
-import com.apps.mobile.android.commons.graphics2d.model.World;
-import com.apps.mobile.android.commons.ui.utils.ScreenUtils;
 import com.stoptheballs.cfg.world.IConfigurationWorld;
 import com.stoptheballs.model.entities.Entity2D_Challenger_StopTheBalls;
 import com.stoptheballs.model.entities.Entity2D_Player_StopTheBalls;
