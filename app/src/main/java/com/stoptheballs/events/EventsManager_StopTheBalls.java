@@ -12,7 +12,6 @@ import com.apps.mobile.android.commons.app.Application_Base;
 import com.apps.mobile.android.commons.cfg.achievements.IConfigurationAchievements;
 import com.apps.mobile.android.commons.events.EventsManager_Base;
 import com.apps.mobile.android.commons.events.api.IEvent_Base;
-import com.apps.mobile.android.commons.graphics2d.model.GameData;
 import com.apps.mobile.android.commons.graphics2d.model.UserSettings;
 import com.apps.mobile.android.commons.model.GameData_Base;
 import com.apps.mobile.android.commons.model.UserSettings_Base;

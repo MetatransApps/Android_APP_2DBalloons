@@ -2,10 +2,8 @@ package com.stoptheballs.app;
 
 
 import com.apps.mobile.android.commons.achievements.IAchievementsManager;
-import com.apps.mobile.android.commons.ads.api.IAdsConfigurations;
 import com.apps.mobile.android.commons.app.Application_Base;
 import com.apps.mobile.android.commons.cfg.app.IAppConfig;
-import com.apps.mobile.android.commons.cfg.appstore.IAppStore;
 import com.apps.mobile.android.commons.cfg.colours.ConfigurationUtils_Colours;
 import com.apps.mobile.android.commons.cfg.menu.ConfigurationUtils_Base_MenuMain;
 import com.apps.mobile.android.commons.engagement.ILeaderboardsProvider;

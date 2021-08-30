@@ -3,7 +3,6 @@ package com.stoptheballs.model.entities;
 
 import java.util.List;
 
-import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.RectF;
 
@@ -12,9 +11,7 @@ import com.apps.mobile.android.commons.graphics2d.model.World;
 import com.apps.mobile.android.commons.graphics2d.model.entities.Entity2D_Challenger;
 import com.apps.mobile.android.commons.graphics2d.model.entities.Entity2D_Ground;
 import com.apps.mobile.android.commons.graphics2d.model.entities.IEntity2D;
-import com.stoptheballs.app.Application_StopTheBalls;
 import com.stoptheballs.model.GameData_StopTheBalls;
-import com.stoptheballs.model.World_StopTheBalls;
 
 
 public class Entity2D_Challenger_StopTheBalls extends Entity2D_Challenger {

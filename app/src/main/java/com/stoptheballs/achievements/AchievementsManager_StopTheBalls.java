@@ -7,9 +7,7 @@ import com.apps.mobile.android.commons.achievements.AchievementsManager_Base;
 import com.apps.mobile.android.commons.app.Application_Base;
 import com.apps.mobile.android.commons.cfg.achievements.IConfigurationAchievements;
 import com.apps.mobile.android.commons.ui.Toast_Base;
-import com.stoptheballs.cfg.achievements.Config_Achievement_ChangeColours;
 import com.stoptheballs.cfg.achievements.Config_Achievement_Invite3Friends;
-import com.stoptheballs.cfg.achievements.Config_Achievement_StopPiecesOnLoading;
 
 
 public class AchievementsManager_StopTheBalls extends AchievementsManager_Base {

@@ -11,8 +11,6 @@ import android.graphics.Paint;
 import android.graphics.RectF;
 
 
-import com.apps.mobile.android.commons.app.Application_Base;
-import com.apps.mobile.android.commons.cfg.colours.ConfigurationUtils_Colours;
 import com.apps.mobile.android.commons.loading.View_Loading_Base;
 import com.apps.mobile.android.commons.model.UserSettings_Base;
 import com.apps.mobile.android.commons.ui.utils.BitmapUtils;
