@@ -43,11 +43,6 @@ public class Entity2D_Player_StopTheBalls extends Entity2D_Player {
 	}
 	
 	
-	protected Class<? extends Activity> getActivityResult_Class() {
-		return Activity_Result.class;
-	}
-	
-	
 	@Override
 	public void nextMoment(float takts) {
 		
@@ -91,8 +86,7 @@ public class Entity2D_Player_StopTheBalls extends Entity2D_Player {
 	protected void killedFinal() {
 		
 		super.killedFinal();
-		
-		Application_Base_Ads.getInstance().openInterstitial();
+
 	}
 	
 	

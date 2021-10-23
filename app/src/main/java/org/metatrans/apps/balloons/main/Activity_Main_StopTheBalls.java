@@ -1,6 +1,7 @@
 package org.metatrans.apps.balloons.main;
 
 
+import android.view.Gravity;
 import android.view.View;
 
 import org.metatrans.commons.ads.api.IAdsConfiguration;
@@ -14,8 +15,8 @@ public class Activity_Main_StopTheBalls extends Activity_Main_Base2D implements 
 	
 	
 	private IAdLoadFlow current_adLoadFlow_Interstitial;
-	
-	
+
+
 	@Override
 	protected View createMainView() {
 		return new View_Main_StopTheBalls(this);

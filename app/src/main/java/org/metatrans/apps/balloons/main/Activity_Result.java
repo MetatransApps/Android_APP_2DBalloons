@@ -24,7 +24,7 @@ public class Activity_Result extends Activity_Result_Base2D {
 				gameGata.count_killed_balls >= settings.best_scores, //new record
 				false, //show mode
 				null,//"All Levels", //mode name
-				new String[] {getString(R.string.balls)},//, "l2", "l3"},
+				new String[] {   getString(R.string.balls)},//, "l2", "l3"},
 				new String[] {"" + gameGata.count_killed_balls},//, "dy2", "dy3"},
 				new String[] {"" + settings.best_scores}//, "db2", "db3"}
 				);

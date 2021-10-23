@@ -50,6 +50,7 @@ public class EventsManager_StopTheBalls extends EventsManager_Base {
 		UserSettings settings = (UserSettings) settings1;
 		
 		int balls_count = data.count_killed_balls;
+
 		if (balls_count > settings.best_scores) {
 			
 			settings.best_scores = balls_count;

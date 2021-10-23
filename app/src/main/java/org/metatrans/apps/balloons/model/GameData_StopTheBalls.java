@@ -7,7 +7,7 @@ public class GameData_StopTheBalls extends org.metatrans.commons.graphics2d.mode
 	private static final long serialVersionUID = -1112210300081303255L;
 
 	
-	public int count_killed_balls;
+	//public int count_killed_balls;
 	
 	
 	public GameData_StopTheBalls() {
