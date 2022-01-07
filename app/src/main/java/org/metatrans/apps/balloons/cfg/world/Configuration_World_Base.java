@@ -5,7 +5,7 @@ public abstract class Configuration_World_Base implements IConfigurationWorld {
 	
 	
 	private int id;
-	private float spaceMultiplier;
+	protected float spaceMultiplier;
 	private float speedMultiplier;
 	
 	
