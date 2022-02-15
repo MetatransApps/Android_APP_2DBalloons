@@ -31,8 +31,11 @@ public class World_StopTheBalls extends World {
 	
 	private List<IEntity2D> killersEntities_forPlayer;
 	private List<IEntity2D> killersEntities_forChallengers;
-	
-	
+
+	private float fire_x;
+	private float fire_y;
+
+
 	public World_StopTheBalls(Context _activity) {
 		
 		super(_activity);
@@ -44,33 +47,49 @@ public class World_StopTheBalls extends World {
 	}
 	
 	
-	public void createBullet(float x, float y) {
-		
-		int border = 20;
-		
-		RectF bulletEnvelop = new RectF(getPlayerEntity().getEvelop().left + border,
-				getPlayerEntity().getEvelop().top + border,
-				getPlayerEntity().getEvelop().right - border,
-				getPlayerEntity().getEvelop().bottom - border);
-		
-		Entity2D_Moving bulletEntity = new Entity2D_Bullet_StopTheBalls(this, bulletEnvelop, getGroundEntities_SolidOnly(), getKillersEntities_forPlayer(),
-				ConfigurationUtils_Colours.getConfigByID(Application_Base.getInstance().getUserSettings().uiColoursID).getColour_Square_ValidSelection());
-		
+	public void setFireVector(float x, float y) {
+
 		float dx = x + getCamera().left - getPlayerEntity().getEvelop().left;
 		float dy = y + getCamera().top - getPlayerEntity().getEvelop().top;
 		
 		if (dx != 0 && dy != 0) {
 		
-			float sx = (float) (dx / Math.sqrt(dx * dx + dy * dy));
-			float sy = (float) (dy / Math.sqrt(dx * dx + dy * dy));
-			
-			bulletEntity.setSpeed(sx * getMaxSpeed_BULLET(), sy * getMaxSpeed_BULLET());
-			
-			addEntity(bulletEntity);
+			fire_x = (float) (dx / Math.sqrt(dx * dx + dy * dy));
+			fire_y = (float) (dy / Math.sqrt(dx * dx + dy * dy));
 		}
 	}
 	
-	
+
+	public void produceShot() {
+
+		if (fire_x != 0 && fire_y != 0) {
+
+			int border = 20;
+
+			RectF bulletEnvelop = new RectF(getPlayerEntity().getEvelop().left + border,
+					getPlayerEntity().getEvelop().top + border,
+					getPlayerEntity().getEvelop().right - border,
+					getPlayerEntity().getEvelop().bottom - border);
+
+			Entity2D_Moving bulletEntity = new Entity2D_Bullet_StopTheBalls(this, bulletEnvelop, getGroundEntities_SolidOnly(), getKillersEntities_forPlayer(),
+					ConfigurationUtils_Colours.getConfigByID(Application_Base.getInstance().getUserSettings().uiColoursID).getColour_Square_ValidSelection());
+
+			bulletEntity.setSpeed(fire_x * getMaxSpeed_BULLET(), fire_y * getMaxSpeed_BULLET());
+
+			addEntity(bulletEntity);
+		}
+	}
+
+
+	@Override
+	public synchronized void update() {
+
+		produceShot();
+
+		super.update();
+	}
+
+
 	private static void initBitmaps() {
 		
 		System.out.println("!EXPENSIVE OP: RE-INIT BITMAPS OF THE WORLD");

@@ -11,6 +11,8 @@ import org.metatrans.commons.app.Application_Base_Ads;
 import org.metatrans.commons.graphics2d.app.Application_2D_Base;
 import org.metatrans.commons.graphics2d.model.GameData;
 import org.metatrans.commons.graphics2d.model.World;
+import org.metatrans.commons.graphics2d.model.entities.Entity2D_Bullet;
+import org.metatrans.commons.graphics2d.model.entities.Entity2D_Moving;
 import org.metatrans.commons.graphics2d.model.entities.Entity2D_Player;
 import org.metatrans.commons.graphics2d.model.entities.IEntity2D;
 import org.metatrans.commons.model.LevelResult_Base;
@@ -78,7 +80,20 @@ public class Entity2D_Player_StopTheBalls extends Entity2D_Player {
 	
 	
 	protected boolean levelCompletedCondition() {
-		return getWorld().getMovingEntities().size() <= 10;
+
+		int count_balloons = 0;
+
+		for (Entity2D_Moving moving: getWorld().getMovingEntities()) {
+
+			if (moving instanceof Entity2D_Challenger_StopTheBalls) {
+
+				count_balloons++;
+			}
+		}
+
+		//System.out.println("count_balloons=" + count_balloons);
+
+		return count_balloons <= 1;
 	}
 	
 	

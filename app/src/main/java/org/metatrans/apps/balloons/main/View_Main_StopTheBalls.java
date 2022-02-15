@@ -120,7 +120,7 @@ public class View_Main_StopTheBalls extends View_Main_Base {
 		
 		float x = event.getX(event.getActionIndex());
 		float y = event.getY(event.getActionIndex());
-		getWorld().createBullet(x, y);
+		getWorld().setFireVector(x, y);
 	}
 	
 	
@@ -135,7 +135,7 @@ public class View_Main_StopTheBalls extends View_Main_Base {
 		
 		float x = event.getX();
 		float y = event.getY();
-		getWorld().createBullet(x, y);
+		getWorld().setFireVector(x, y);
 	}
 	
 	
@@ -150,6 +150,6 @@ public class View_Main_StopTheBalls extends View_Main_Base {
 		
 		float x = event.getX();
 		float y = event.getY();
-		getWorld().createBullet(x, y);
+		getWorld().setFireVector(x, y);
 	}
 }
