@@ -53,7 +53,7 @@ public class UserSettings_StopTheBalls extends UserSettings {
 	    }
 	    
 		if (modeID == 0) {
-			//modeID = ConfigurationUtils_Level.LEVEL_ID_DEFAULT;
+			modeID = ConfigurationUtils_Level.LEVEL_ID_DEFAULT;
 		}
 	}
 }
