@@ -36,9 +36,9 @@ public class World_StopTheBalls extends World {
 	private float fire_y;
 
 
-	public World_StopTheBalls(Context _activity) {
+	public World_StopTheBalls(Context _activity, int _maze_size_x, int _maze_size_y) {
 		
-		super(_activity);
+		super(_activity, _maze_size_x, _maze_size_y);
 		
 		SPEED_MAX_CHALLENGER = 1 * SPEED_MAX_CHALLENGER / 2;
 		
@@ -49,8 +49,8 @@ public class World_StopTheBalls extends World {
 	
 	public void setFireVector(float x, float y) {
 
-		float dx = x + getCamera().left - getPlayerEntity().getEvelop().left;
-		float dy = y + getCamera().top - getPlayerEntity().getEvelop().top;
+		float dx = x + getCamera().left - getPlayerEntity().getEnvelop().left;
+		float dy = y + getCamera().top - getPlayerEntity().getEnvelop().top;
 		
 		if (dx != 0 && dy != 0) {
 		
@@ -66,10 +66,10 @@ public class World_StopTheBalls extends World {
 
 			int border = 20;
 
-			RectF bulletEnvelop = new RectF(getPlayerEntity().getEvelop().left + border,
-					getPlayerEntity().getEvelop().top + border,
-					getPlayerEntity().getEvelop().right - border,
-					getPlayerEntity().getEvelop().bottom - border);
+			RectF bulletEnvelop = new RectF(getPlayerEntity().getEnvelop().left + border,
+					getPlayerEntity().getEnvelop().top + border,
+					getPlayerEntity().getEnvelop().right - border,
+					getPlayerEntity().getEnvelop().bottom - border);
 
 			Entity2D_Moving bulletEntity = new Entity2D_Bullet_StopTheBalls(this, bulletEnvelop, getGroundEntities_SolidOnly(), getKillersEntities_forPlayer(),
 					ConfigurationUtils_Colours.getConfigByID(Application_Base.getInstance().getUserSettings().uiColoursID).getColour_Square_ValidSelection());
@@ -77,6 +77,10 @@ public class World_StopTheBalls extends World {
 			bulletEntity.setSpeed(fire_x * getMaxSpeed_BULLET(), fire_y * getMaxSpeed_BULLET());
 
 			addEntity(bulletEntity);
+
+			fire_x = 0;
+
+			fire_y = 0;
 		}
 	}
 

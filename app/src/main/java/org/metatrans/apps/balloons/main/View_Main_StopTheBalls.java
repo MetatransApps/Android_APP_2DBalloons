@@ -115,11 +115,13 @@ public class View_Main_StopTheBalls extends View_Main_Base {
 		super.processEvent_DOWN(event);
 		
 		if (!Application_2D_Base.getInstance().isCurrentlyGameActiveIntoTheMainScreen()) {
+
 			return;
 		}
 		
 		float x = event.getX(event.getActionIndex());
 		float y = event.getY(event.getActionIndex());
+
 		getWorld().setFireVector(x, y);
 	}
 	
@@ -130,11 +132,13 @@ public class View_Main_StopTheBalls extends View_Main_Base {
 		super.processEvent_MOVE(event);
 		
 		if (!Application_2D_Base.getInstance().isCurrentlyGameActiveIntoTheMainScreen()) {
+
 			return;
 		}
 		
 		float x = event.getX();
 		float y = event.getY();
+
 		getWorld().setFireVector(x, y);
 	}
 	
@@ -145,11 +149,13 @@ public class View_Main_StopTheBalls extends View_Main_Base {
 		super.processEvent_UP(event);
 		
 		if (!Application_2D_Base.getInstance().isCurrentlyGameActiveIntoTheMainScreen()) {
+
 			return;
 		}
 		
 		float x = event.getX();
 		float y = event.getY();
+
 		getWorld().setFireVector(x, y);
 	}
 }

@@ -8,8 +8,10 @@ import org.metatrans.commons.app.Application_Base;
 import org.metatrans.commons.graphics2d.model.World;
 import org.metatrans.commons.graphics2d.model.entities.Entity2D_Challenger;
 import org.metatrans.commons.graphics2d.model.entities.Entity2D_Ground;
+import org.metatrans.commons.graphics2d.model.entities.Entity2D_Moving;
 import org.metatrans.commons.graphics2d.model.entities.IEntity2D;
 
+import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.RectF;
 
@@ -30,8 +32,8 @@ public class Entity2D_Challenger_StopTheBalls extends Entity2D_Challenger {
 		
 		super(_world, _evelop, _blockerEntities, _killerEntities);
 		
-		float dx = x_player - getEvelop().left;
-		float dy = y_player - getEvelop().top;
+		float dx = 1f * (x_player - getEnvelop().left);
+		float dy = 1f * (y_player - getEnvelop().top);
 		
 		float sx = (float) (dx / Math.sqrt(dx * dx + dy * dy));
 		float sy = (float) (dy / Math.sqrt(dx * dx + dy * dy));
@@ -43,21 +45,35 @@ public class Entity2D_Challenger_StopTheBalls extends Entity2D_Challenger {
 	
 	
 	@Override
-	protected void killed() {
+	protected void killed(Entity2D_Moving killer) {
 		
-		super.killed();
+		super.killed(killer);
 		
 		((GameData_StopTheBalls)Application_Base.getInstance().getGameData()).count_killed_balls++;
 	}
-	
-	
+
+
+	@Override
+	protected boolean supportsFeeding() {
+
+		return false;
+	}
+
+
+	@Override
+	public Bitmap getBitmap() {
+
+		return null;
+	}
+
+
 	@Override
 	public void draw(Canvas c) {
 		getPaint().setColor(colour);
 		getPaint().setAlpha(255);
-		c.drawCircle(getEvelop().left + (getEvelop().right - getEvelop().left) / 2,
-					 getEvelop().top + (getEvelop().bottom - getEvelop().top) / 2,
-					 (getEvelop().right - getEvelop().left) / 2,
+		c.drawCircle(getEnvelop().left + (getEnvelop().right - getEnvelop().left) / 2,
+					getEnvelop().top + (getEnvelop().bottom - getEnvelop().top) / 2,
+					(getEnvelop().right - getEnvelop().left) / 2,
 					 getPaint());
 	}
 }
