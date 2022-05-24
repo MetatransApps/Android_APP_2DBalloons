@@ -1,13 +1,10 @@
 package org.metatrans.apps.balloons.main;
 
 
-import android.view.Gravity;
 import android.view.View;
 
 import org.metatrans.commons.IActivityInterstitial;
 import org.metatrans.commons.ads.api.IAdsConfiguration;
-import org.metatrans.commons.ads.impl.flow.IAdLoadFlow;
-import org.metatrans.commons.app.Application_Base_Ads;
 import org.metatrans.commons.graphics2d.main.Activity_Main_Base2D;
 
 
