@@ -107,7 +107,7 @@ public class Entity2D_Player_StopTheBalls extends Entity2D_Player {
 		
 		super.nextMoment(takts);
 		
-		if (levelCompletedCondition()) {
+		if (!getGameData().level_completed && levelCompletedCondition()) {
 			
 			getGameData().level_completed = true;
 			
@@ -150,7 +150,7 @@ public class Entity2D_Player_StopTheBalls extends Entity2D_Player {
 
 		int count_balloons = getCount_Balloons();
 
-		System.out.println("count_balloons=" + count_balloons);
+		//System.out.println("count_balloons=" + count_balloons);
 
 		return count_balloons <= 0;
 	}
@@ -168,6 +168,11 @@ public class Entity2D_Player_StopTheBalls extends Entity2D_Player {
 
 				count_balloons++;
 			}
+		}
+
+		if (count_balloons < 0) {
+
+			count_balloons = 0;
 		}
 
 		return count_balloons;

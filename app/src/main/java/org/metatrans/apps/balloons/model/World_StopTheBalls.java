@@ -4,8 +4,11 @@ package org.metatrans.apps.balloons.model;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.metatrans.apps.balloons.cfg.world.ConfigurationUtils_Level;
+import org.metatrans.apps.balloons.cfg.world.IConfigurationWorld;
 import org.metatrans.apps.balloons.model.entities.Entity2D_Bullet_StopTheBalls;
 import org.metatrans.apps.balloons.model.entities.Entity2D_Player_StopTheBalls;
+import org.metatrans.commons.app.Application_Base;
 import org.metatrans.commons.graphics2d.model.World;
 import org.metatrans.commons.graphics2d.model.entities.Entity2D_Bullet;
 import org.metatrans.commons.graphics2d.model.entities.Entity2D_Challenger;
@@ -168,7 +171,9 @@ public class World_StopTheBalls extends World {
 		);
 		*/
 
-		int bitmap_id = WorldGenerator_StopTheBalls.getBitmapArrows_Random();
+		IConfigurationWorld world_cfg = ConfigurationUtils_Level.getInstance().getConfigByID(Application_Base.getInstance().getUserSettings().modeID);
+
+		int bitmap_id = world_cfg.getBitmapArrows_Random();
 
 		Entity2D_Moving bulletEntity = new Entity2D_Bullet_StopTheBalls(
 				this,

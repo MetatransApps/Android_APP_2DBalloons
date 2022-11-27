@@ -6,10 +6,12 @@ import org.metatrans.commons.cfg.difficulty.IConfigurationDifficulty;
 
 public interface IConfigurationWorld extends IConfigurationDifficulty {
 	
-	public float getSpaceMultiplier();
-	public float getSpeedMultiplier();
+	float getSpaceMultiplier();
+	float getSpeedMultiplier();
 	
-	public String getName_String();
-	public String getDescription_String();
-	
+	String getName_String();
+	String getDescription_String();
+
+    int getBitmapBalloons_Random();
+    int getBitmapArrows_Random();
 }

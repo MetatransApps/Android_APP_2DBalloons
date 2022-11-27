@@ -9,9 +9,9 @@ import org.metatrans.commons.app.Application_Base;
 public class Configuration_World extends Configuration_World_Base {
 	
 	
-	public Configuration_World(int id, float spaceMultiplier, float speedMultiplier) {
+	public Configuration_World(int id, float spaceMultiplier, float speedMultiplier, int[] _from_to_index) {
 		
-		super(id, spaceMultiplier, speedMultiplier);
+		super(id, spaceMultiplier, speedMultiplier, _from_to_index);
 	}
 	
 	

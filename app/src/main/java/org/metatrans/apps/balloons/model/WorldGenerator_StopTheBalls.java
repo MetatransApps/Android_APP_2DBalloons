@@ -18,57 +18,16 @@ public class WorldGenerator_StopTheBalls {
 	public static int LAST_BALLOONS_COUNT = 55555;
 
 
-	private static final int[] BITMAP_IDS_BALLOONS = new int[] {
-
-			BitmapCache_Balloons.BITMAP_ID_BALLOONS_BLUE_ORG,
-			BitmapCache_Balloons.BITMAP_ID_BALLOONS_INDIGO_ORG,
-			BitmapCache_Balloons.BITMAP_ID_BALLOONS_VIOLET_ORG,
-			BitmapCache_Balloons.BITMAP_ID_BALLOONS_BLACK_ORG,
-			BitmapCache_Balloons.BITMAP_ID_BALLOONS_WHITE_ORG,
-			BitmapCache_Balloons.BITMAP_ID_BALLOONS_GRAY_ORG,
-			BitmapCache_Balloons.BITMAP_ID_BALLOONS_RED_ORG,
-			BitmapCache_Balloons.BITMAP_ID_BALLOONS_GREEN_ORG,
-			BitmapCache_Balloons.BITMAP_ID_BALLOONS_YELLOW_ORG,
-			BitmapCache_Balloons.BITMAP_ID_BALLOONS_ORANGE_ORG,
-	};
-
-
-	private static final int[] BITMAP_IDS_ARROWS = new int[] {
-
-			BitmapCache_Balloons.BITMAP_ID_ARROWS_BLUE,
-			BitmapCache_Balloons.BITMAP_ID_ARROWS_INDIGO,
-			BitmapCache_Balloons.BITMAP_ID_ARROWS_VIOLET,
-			BitmapCache_Balloons.BITMAP_ID_ARROWS_BLACK,
-			BitmapCache_Balloons.BITMAP_ID_ARROWS_WHITE,
-			BitmapCache_Balloons.BITMAP_ID_ARROWS_GRAY,
-			BitmapCache_Balloons.BITMAP_ID_ARROWS_RED,
-			BitmapCache_Balloons.BITMAP_ID_ARROWS_GREEN,
-			BitmapCache_Balloons.BITMAP_ID_ARROWS_YELLOW,
-			BitmapCache_Balloons.BITMAP_ID_ARROWS_ORANGE,
-	};
-
-
 	public static final int getBalloonsCount(float scaleFactor) {
 
 		LAST_BALLOONS_COUNT = (int) (25 * scaleFactor);
 
+		if (LAST_BALLOONS_COUNT < 0) {
+
+			LAST_BALLOONS_COUNT = 0;
+		}
+
 		return LAST_BALLOONS_COUNT;
-	}
-
-
-	private static final int getBitmapBalloons_Random() {
-
-		int bitmap_id = (int) (BITMAP_IDS_BALLOONS.length * Math.random());
-
-		return BITMAP_IDS_BALLOONS[bitmap_id];
-	}
-
-
-	public static final int getBitmapArrows_Random() {
-
-		int bitmap_id = (int) (BITMAP_IDS_ARROWS.length * Math.random());
-
-		return BITMAP_IDS_ARROWS[bitmap_id];
 	}
 
 
@@ -156,7 +115,7 @@ public class WorldGenerator_StopTheBalls {
 						world.getPlayerEntity().getEnvelop().left,
 						world.getPlayerEntity().getEnvelop().top,
 						cfg_world.getSpeedMultiplier(),
-						getBitmapBalloons_Random()
+						cfg_world.getBitmapBalloons_Random()
 					)
 				);
 			}

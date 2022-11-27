@@ -100,7 +100,7 @@ public class View_Main_StopTheBalls extends View_Main_Base {
 		textarea_level.draw(canvas);
 
 		int count_all_balloons = ((Entity2D_Player_StopTheBalls) getWorld().getPlayerEntity()).getCount_Balloons();
-		canvas.drawBitmap(BitmapCache_Balloons.STATIC.getInstance(BitmapCache_Balloons.BITMAP_ID_COMMON).get(BitmapCache_Balloons.BITMAP_ID_BALLOONS_BLUE_ORG), null, rect_balls_icon, default_paint);
+		canvas.drawBitmap(BitmapCache_Balloons.STATIC.getInstance(BitmapCache_Balloons.BITMAP_ID_COMMON).get(BitmapCache_Balloons.BITMAP_ID_BALLOONS_WHITE_ORG), null, rect_balls_icon, default_paint);
 		textarea_balls.setColour_Text(Color.WHITE);
 		textarea_balls.setText("x " + count_all_balloons);
 		textarea_balls.draw(canvas);
