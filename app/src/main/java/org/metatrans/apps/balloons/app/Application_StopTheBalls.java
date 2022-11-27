@@ -7,6 +7,7 @@ import org.metatrans.apps.balloons.cfg.world.ConfigurationUtils_Level;
 import org.metatrans.apps.balloons.events.EventsManager_StopTheBalls;
 import org.metatrans.apps.balloons.lib.BuildConfig;
 import org.metatrans.apps.balloons.main.Activity_Result;
+import org.metatrans.apps.balloons.model.BitmapCache_Balloons;
 import org.metatrans.apps.balloons.model.GameData_StopTheBalls;
 import org.metatrans.apps.balloons.model.UserSettings_StopTheBalls;
 import org.metatrans.apps.balloons.model.WorldGenerator_StopTheBalls;
@@ -19,7 +20,9 @@ import org.metatrans.commons.engagement.ILeaderboardsProvider;
 import org.metatrans.commons.engagement.leaderboards.LeaderboardsProvider_Base;
 import org.metatrans.commons.events.api.IEventsManager;
 import org.metatrans.commons.graphics2d.app.Application_2D_Base;
+import org.metatrans.commons.graphics2d.model.BitmapCache_Base;
 import org.metatrans.commons.graphics2d.model.IWorld;
+import org.metatrans.commons.graphics2d.model.entities.I2DBitmapCache;
 import org.metatrans.commons.model.GameData_Base;
 import org.metatrans.commons.model.UserSettings_Base;
 import org.metatrans.commons.ui.utils.DebugUtils;
@@ -44,6 +47,10 @@ public abstract class Application_StopTheBalls extends Application_2D_Base {
 		ConfigurationUtils_Colours.class.getName();
 		
 		ConfigurationUtils_Base_MenuMain.createInstance();
+
+		BitmapCache_Base.STATIC = new BitmapCache_Balloons(I2DBitmapCache.BITMAP_ID_STATIC);
+
+		BitmapCache_Base.STATIC.initBitmaps();
 	}
 	
 	

@@ -19,7 +19,7 @@ public class Configuration_World extends Configuration_World_Base {
 		
 		String name = Application_Base.getInstance().getString(R.string.level) + " " + getID();
 		
-		int ballsCount = WorldGenerator_StopTheBalls.getBallsCount(spaceMultiplier);
+		int ballsCount = WorldGenerator_StopTheBalls.getBalloonsCount(spaceMultiplier);
 		
 		name += " (" + ballsCount + " " + Application_Base.getInstance().getString(R.string.balls) + ")";
 		

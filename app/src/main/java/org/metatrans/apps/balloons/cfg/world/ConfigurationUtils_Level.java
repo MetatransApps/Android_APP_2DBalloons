@@ -22,11 +22,13 @@ public class ConfigurationUtils_Level extends ConfigurationUtils_Base {
 	public static void createInstance() {
 		
 		IConfigurationEntry[] cfgs_levels = new IConfigurationEntry[50];
-		
+
+		float speed_scale = 0.333f;
+
 		for (int i=0; i<cfgs_levels.length; i++) {
-			
+
 			float scaleFactor = (float) (3 + i);
-			float speedMultiplier = 1f + 2f * i / (float) cfgs_levels.length;
+			float speedMultiplier = 1f * speed_scale + 2f * speed_scale * i / (float) cfgs_levels.length;
 			
 			cfgs_levels[i] = new Configuration_World(i + 1, scaleFactor, speedMultiplier);
 		}

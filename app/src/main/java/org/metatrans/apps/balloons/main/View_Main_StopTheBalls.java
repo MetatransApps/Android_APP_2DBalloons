@@ -9,8 +9,11 @@ import android.graphics.RectF;
 import android.view.MotionEvent;
 
 import org.metatrans.apps.balloons.menu.Activity_Menu_Main;
+import org.metatrans.apps.balloons.model.BitmapCache_Balloons;
 import org.metatrans.apps.balloons.model.GameData_StopTheBalls;
+import org.metatrans.apps.balloons.model.WorldGenerator_StopTheBalls;
 import org.metatrans.apps.balloons.model.World_StopTheBalls;
+import org.metatrans.apps.balloons.model.entities.Entity2D_Player_StopTheBalls;
 import org.metatrans.commons.app.Application_Base;
 import org.metatrans.commons.graphics2d.app.Application_2D_Base;
 import org.metatrans.commons.graphics2d.main.Activity_Main_Base2D;
@@ -34,8 +37,8 @@ public class View_Main_StopTheBalls extends View_Main_Base {
 	
 	private TextArea textarea_level;
 	private TextArea textarea_balls;
-	
-	
+
+
 	public View_Main_StopTheBalls(Activity_Main_Base2D activity) {
 		
 		super(activity);
@@ -72,8 +75,8 @@ public class View_Main_StopTheBalls extends View_Main_Base {
 		textarea_balls 		= new TextArea(rect_balls_text, 	"x 000000 ", 	Color.GREEN);
 
 	}
-	
-	
+
+
 	@Override
 	public Class getMainMenuClass() {
 		return Activity_Menu_Main.class;
@@ -91,20 +94,21 @@ public class View_Main_StopTheBalls extends View_Main_Base {
 		canvas.drawRect(rect_balls, default_paint);
 		
 		int level = Application_Base.getInstance().getUserSettings().modeID;
-		canvas.drawBitmap(World_StopTheBalls.getBitmap_level(), null, rect_level_icon, default_paint);
+		canvas.drawBitmap(BitmapCache_Balloons.STATIC.getInstance(BitmapCache_Balloons.BITMAP_ID_COMMON).get(BitmapCache_Balloons.BITMAP_ID_LEVEL), null, rect_level_icon, default_paint);
 		textarea_level.setColour_Text(Color.GREEN);
 		textarea_level.setText("" + level + " ");
 		textarea_level.draw(canvas);
-		
-		int balls = ((GameData_StopTheBalls)Application_Base.getInstance().getGameData()).count_killed_balls;
-		canvas.drawBitmap(World_StopTheBalls.getBitmap_balls(), null, rect_balls_icon, default_paint);
-		textarea_balls.setColour_Text(Color.GREEN);
-		textarea_balls.setText("x " + balls + " ");
+
+		int count_all_balloons = ((Entity2D_Player_StopTheBalls) getWorld().getPlayerEntity()).getCount_Balloons();
+		canvas.drawBitmap(BitmapCache_Balloons.STATIC.getInstance(BitmapCache_Balloons.BITMAP_ID_COMMON).get(BitmapCache_Balloons.BITMAP_ID_BALLOONS_BLUE_ORG), null, rect_balls_icon, default_paint);
+		textarea_balls.setColour_Text(Color.WHITE);
+		textarea_balls.setText("x " + count_all_balloons);
 		textarea_balls.draw(canvas);
 	}
 	
 	
 	protected World_StopTheBalls getWorld() {
+
 		return (World_StopTheBalls) super.getWorld();
 	}
 	
