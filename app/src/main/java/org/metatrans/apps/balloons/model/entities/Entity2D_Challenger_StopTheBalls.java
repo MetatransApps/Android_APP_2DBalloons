@@ -103,6 +103,7 @@ public class Entity2D_Challenger_StopTheBalls extends Entity2D_Challenger {
 		Entity2D_Moving balloon_burst = new Entity2D_Animation_Balloons(
 				getWorld(),
 				envelop,
+				bitmap_id,
 				getBurstBitmapSequenceIDs(),
 				getRotationDegrees()
 		);

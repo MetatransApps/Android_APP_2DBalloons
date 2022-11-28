@@ -13,6 +13,35 @@ public class ConfigurationUtils_Level extends ConfigurationUtils_Base {
 	
 	public static final int LEVEL_ID_DEFAULT = 1;
 
+	
+	public static ConfigurationUtils_Level getInstance() {
+
+		return (ConfigurationUtils_Level) getInstance(TAG_NAME);
+	}
+	
+	
+	public static void createInstance() {
+		
+		IConfigurationEntry[] cfgs_levels = new IConfigurationEntry[50];
+
+		float speed_scale = 0.333f;
+
+		for (int i=0; i<cfgs_levels.length; i++) {
+
+			float scaleFactor = (float) (3 + i);
+
+			float speedMultiplier = 1f * speed_scale + 2f * speed_scale * i / (float) cfgs_levels.length;
+
+			int[] from_to_index = get_bitmap_from_to_index(i);
+
+			//System.out.println("Bitmaps from_to_index=[" + from_to_index[0] + ", " + from_to_index[1] + "]");
+
+			cfgs_levels[i] = new Configuration_World(i + 1, scaleFactor, speedMultiplier, from_to_index);
+		}
+		
+		createInstance(TAG_NAME, new ConfigurationUtils_Level(), cfgs_levels);
+	}
+
 
 	private static final int[][] bitmaps_from_to_indexes = new int[][] {
 			{0, 2},
@@ -42,35 +71,6 @@ public class ConfigurationUtils_Level extends ConfigurationUtils_Base {
 			{1, 9},
 			{0, 9},
 	};
-
-	
-	public static ConfigurationUtils_Level getInstance() {
-
-		return (ConfigurationUtils_Level) getInstance(TAG_NAME);
-	}
-	
-	
-	public static void createInstance() {
-		
-		IConfigurationEntry[] cfgs_levels = new IConfigurationEntry[50];
-
-		float speed_scale = 0.333f;
-
-		for (int i=0; i<cfgs_levels.length; i++) {
-
-			float scaleFactor = (float) (3 + i);
-
-			float speedMultiplier = 1f * speed_scale + 2f * speed_scale * i / (float) cfgs_levels.length;
-
-			int[] from_to_index = get_bitmap_from_to_index(i);
-
-			//System.out.println("Bitmaps from_to_index=[" + from_to_index[0] + ", " + from_to_index[1] + "]");
-
-			cfgs_levels[i] = new Configuration_World(i + 1, scaleFactor, speedMultiplier, from_to_index);
-		}
-		
-		createInstance(TAG_NAME, new ConfigurationUtils_Level(), cfgs_levels);
-	}
 
 
 	private static int[] get_bitmap_from_to_index(int cfg_index) {

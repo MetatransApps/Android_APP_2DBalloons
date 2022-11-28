@@ -20,7 +20,7 @@ public class UserSettings_StopTheBalls extends UserSettings {
 		
 		super();
 		
-		uiColoursID 		= IConfigurationColours.CFG_COLOUR_GRAY;
+		uiColoursID 		= IConfigurationColours.CFG_COLOUR_BLUE_SKY_ON_GRAY;
 		modeID 				= ConfigurationUtils_Level.LEVEL_ID_DEFAULT;
 		
 		//fixFields("constructor");
@@ -48,7 +48,7 @@ public class UserSettings_StopTheBalls extends UserSettings {
 	private void fixFields(String op) {
 		
 		if (uiColoursID == 0) {
-	    	uiColoursID 		= IConfigurationColours.CFG_COLOUR_GRAY;
+	    	uiColoursID 		= IConfigurationColours.CFG_COLOUR_BLUE_SKY_ON_GRAY;
 	    	System.out.println("UserSettings: " + op + " - updating colour id");
 	    }
 	    

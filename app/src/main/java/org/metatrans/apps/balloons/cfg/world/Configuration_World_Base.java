@@ -1,6 +1,8 @@
 package org.metatrans.apps.balloons.cfg.world;
 
 
+import android.graphics.Color;
+
 import org.metatrans.apps.balloons.model.BitmapCache_Balloons;
 
 
@@ -34,6 +36,20 @@ public abstract class Configuration_World_Base implements IConfigurationWorld {
 			BitmapCache_Balloons.BITMAP_ID_ARROWS_BLUE,
 			BitmapCache_Balloons.BITMAP_ID_ARROWS_INDIGO,
 			BitmapCache_Balloons.BITMAP_ID_ARROWS_VIOLET,
+	};
+
+	private static final Color[] BASE_COLOR_EXPLOSION_BALLOONS = new Color[] {
+
+			Color.valueOf(Color.BLACK),
+			Color.valueOf(Color.WHITE),
+			Color.valueOf(Color.GRAY),
+			Color.valueOf(Color.RED),
+			Color.valueOf(Color.argb(255, 255, 165, 0)),
+			Color.valueOf(Color.YELLOW),
+			Color.valueOf(Color.GREEN),
+			Color.valueOf(Color.argb(255, 0, 191, 255)),
+			Color.valueOf(Color.BLUE),
+			Color.valueOf(Color.MAGENTA),
 	};
 
 
@@ -88,5 +104,29 @@ public abstract class Configuration_World_Base implements IConfigurationWorld {
 		int bitmap_id = from_to_index[0] + (int) ((length + 1) * Math.random());
 
 		return BITMAP_IDS_ARROWS[bitmap_id];
+	}
+
+
+	@Override
+	public Color getBaseExplosionColor(int balloon_bitmap_id) {
+
+		int index = -1;
+
+		for (int i = 0; i < BITMAP_IDS_BALLOONS.length; i++) {
+
+			if (balloon_bitmap_id == BITMAP_IDS_BALLOONS[i]) {
+
+				index = i;
+
+				break;
+			}
+		}
+
+		if (index == -1) {
+
+			throw new IllegalStateException("Color for balloon_bitmap_id " + balloon_bitmap_id + " not found.");
+		}
+
+		return BASE_COLOR_EXPLOSION_BALLOONS[index];
 	}
 }

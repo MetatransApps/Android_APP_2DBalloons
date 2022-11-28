@@ -1,6 +1,8 @@
 package org.metatrans.apps.balloons.cfg.world;
 
 
+import android.graphics.Color;
+
 import org.metatrans.commons.cfg.difficulty.IConfigurationDifficulty;
 
 
@@ -14,4 +16,5 @@ public interface IConfigurationWorld extends IConfigurationDifficulty {
 
     int getBitmapBalloons_Random();
     int getBitmapArrows_Random();
+	Color getBaseExplosionColor(int balloon_bitmap_id);
 }
