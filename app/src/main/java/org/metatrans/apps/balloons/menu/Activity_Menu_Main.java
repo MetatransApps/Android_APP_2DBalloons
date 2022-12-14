@@ -6,6 +6,7 @@ import java.util.List;
 
 import org.metatrans.apps.balloons.cfg.world.ConfigurationUtils_Level;
 import org.metatrans.apps.balloons.lib.R;
+import org.metatrans.apps.balloons.model.UserSettings_StopTheBalls;
 import org.metatrans.commons.app.Application_Base;
 import org.metatrans.commons.cfg.menu.Config_MenuMain_Base;
 import org.metatrans.commons.cfg.menu.IConfigurationMenu_Main;
@@ -21,6 +22,7 @@ public class Activity_Menu_Main extends Activity_Menu_Main_Base {
 	public static int CFG_MENU_LEVELS			 		= 15;
 	public static int CFG_MENU_RESULT			 		= 16;
 	public static int CFG_MENU_ACHIEVEMENTS		 		= 17;
+	public static int CFG_MENU_WORLD_VIEW	 			= 28;
 
 
 	@Override
@@ -71,6 +73,59 @@ public class Activity_Menu_Main extends Activity_Menu_Main_Base {
 							currentActivity.finish();
 							
 							Intent i = new Intent(currentActivity, Activity_Menu_Levels.class);
+							currentActivity.startActivity(i);
+						}
+					}
+				};
+			}
+		});
+
+
+
+		result.add(new Config_MenuMain_Base() {
+
+
+			@Override
+			public int getName() {
+				return R.string.worldview;
+			}
+
+
+			@Override
+			public int getIconResID() {
+				return ConfigurationUtils_WorldView.getConfigByID(((UserSettings_StopTheBalls)
+						((Application_Base) getApplication()).getUserSettings()).cfg_id_worldview).getBitmapResourceID_Icon();
+			}
+
+
+			@Override
+			public int getID() {
+				return CFG_MENU_WORLD_VIEW;
+			}
+
+
+			@Override
+			public String getDescription_String() {
+
+				return ConfigurationUtils_WorldView.getConfigByID(((UserSettings_StopTheBalls)((Application_Base) getApplication()).getUserSettings()).cfg_id_worldview).getName_String();
+			}
+
+
+			@Override
+			public Runnable getAction() {
+
+				return new Runnable() {
+
+					@Override
+					public void run() {
+						Activity currentActivity = Application_Base.getInstance().getCurrentActivity();
+
+						if (currentActivity != null) {
+
+							currentActivity.finish();
+
+							Intent i = new Intent(currentActivity, Activity_Menu_WorldView.class);
+
 							currentActivity.startActivity(i);
 						}
 					}

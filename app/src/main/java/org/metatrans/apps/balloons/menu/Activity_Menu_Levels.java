@@ -78,7 +78,8 @@ public class Activity_Menu_Levels extends Activity_Base {
 	}
 	
 	
-	protected ConfigurationUtils_Base getConfigurationLevels() { 
+	protected ConfigurationUtils_Base getConfigurationLevels() {
+
 		return ConfigurationUtils_Level.getInstance();
 	}
 	

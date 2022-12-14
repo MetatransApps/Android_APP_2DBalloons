@@ -20,10 +20,12 @@ public class Configuration_World extends Configuration_World_Base {
 	private String getName(float spaceMultiplier) {
 		
 		String name = Application_Base.getInstance().getString(R.string.level) + " " + getID();
+
+		IConfigurationWorld world_cfg = ConfigurationUtils_Level.getInstance().getConfigByID(getID());
+
+		int count_balloons_all = WorldGenerator_StopTheBalls.getBalloonsCount_Reduced(world_cfg.getSpaceMultiplier());
 		
-		int ballsCount = WorldGenerator_StopTheBalls.getBalloonsCount(spaceMultiplier);
-		
-		name += " (" + ballsCount + " " + Application_Base.getInstance().getString(R.string.balls) + ")";
+		name += " (" + count_balloons_all + " " + Application_Base.getInstance().getString(R.string.balls) + ")";
 		
 		return name;
 	}

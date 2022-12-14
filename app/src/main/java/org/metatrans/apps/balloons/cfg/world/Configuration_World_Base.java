@@ -9,7 +9,7 @@ import org.metatrans.apps.balloons.model.BitmapCache_Balloons;
 public abstract class Configuration_World_Base implements IConfigurationWorld {
 	
 
-		private static final int[] BITMAP_IDS_BALLOONS = new int[] {
+	private static final int[] BITMAP_IDS_BALLOONS = new int[] {
 
 			BitmapCache_Balloons.BITMAP_ID_BALLOONS_BLACK_ORG,
 			BitmapCache_Balloons.BITMAP_ID_BALLOONS_WHITE_ORG,
@@ -37,6 +37,7 @@ public abstract class Configuration_World_Base implements IConfigurationWorld {
 			BitmapCache_Balloons.BITMAP_ID_ARROWS_INDIGO,
 			BitmapCache_Balloons.BITMAP_ID_ARROWS_VIOLET,
 	};
+
 
 	private static final Color[] BASE_COLOR_EXPLOSION_BALLOONS = new Color[] {
 

@@ -3,7 +3,7 @@ package org.metatrans.apps.balloons.model;
 
 import org.metatrans.apps.balloons.lib.R;
 import org.metatrans.commons.app.Application_Base;
-import org.metatrans.commons.graphics2d.model.BitmapCache_Base;
+import org.metatrans.commons.model.BitmapCache_Base;
 import org.metatrans.commons.ui.utils.BitmapUtils;
 
 
@@ -102,6 +102,15 @@ public class BitmapCache_Balloons extends BitmapCache_Base {
 	public static final int BITMAP_ID_BALLOONS_BLUE_PART_6 		= 830;
 	public static final int BITMAP_ID_BALLOONS_INDIGO_PART_6 	= 840;
 	public static final int BITMAP_ID_BALLOONS_VIOLET_PART_6 	= 850;
+
+
+	public static final int BITMAP_ID_BALLOONS_BACKGROUND_GRADIENT 	= 1000;
+	public static final int BITMAP_ID_BALLOONS_BACKGROUND_BRICKWALL	= 1100;
+	public static final int BITMAP_ID_BALLOONS_BACKGROUND_FORTRESS	= 1200;
+
+	public static final int BITMAP_ID_BALLOONS_ICON_GRADIENT 		= 1300;
+	public static final int BITMAP_ID_BALLOONS_ICON_BRICKWALL		= 1400;
+	public static final int BITMAP_ID_BALLOONS_ICON_FORTRESS		= 1500;
 
 
 	public BitmapCache_Balloons(Integer cache_id) {
@@ -385,5 +394,29 @@ public class BitmapCache_Balloons extends BitmapCache_Base {
 		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).add(
 				BitmapCache_Balloons.BITMAP_ID_BALLOONS_ORANGE_PART_6,
 				BitmapUtils.fromResource(Application_Base.getInstance(), R.drawable.ic_balloon_orange_step_5));
+
+
+		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).add(
+				BitmapCache_Balloons.BITMAP_ID_BALLOONS_ICON_GRADIENT,
+				BitmapUtils.fromResource(Application_Base.getInstance(), R.drawable.ic_balloons_icon_gradient));
+		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).add(
+				BitmapCache_Balloons.BITMAP_ID_BALLOONS_ICON_BRICKWALL,
+				BitmapUtils.fromResource(Application_Base.getInstance(), R.drawable.ic_balloons_icon_brickwall));
+		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).add(
+				BitmapCache_Balloons.BITMAP_ID_BALLOONS_ICON_FORTRESS,
+				BitmapUtils.fromResource(Application_Base.getInstance(), R.drawable.ic_balloons_icon_fortress_v5));
+
+		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).add(
+				BitmapCache_Balloons.BITMAP_ID_BALLOONS_BACKGROUND_GRADIENT,
+				BitmapUtils.fromResource(Application_Base.getInstance(), R.drawable.ic_background_gradient),
+				false);
+		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).add(
+				BitmapCache_Balloons.BITMAP_ID_BALLOONS_BACKGROUND_BRICKWALL,
+				BitmapUtils.fromResource(Application_Base.getInstance(), R.drawable.ic_background_brickwall),
+				false);
+		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).add(
+				BitmapCache_Balloons.BITMAP_ID_BALLOONS_BACKGROUND_FORTRESS,
+				BitmapUtils.fromResource(Application_Base.getInstance(), R.drawable.ic_background_fortress_v3),
+				false);
 	}
 }

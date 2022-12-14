@@ -81,12 +81,7 @@ public class Entity2D_Challenger_StopTheBalls extends Entity2D_Challenger {
 		
 		((GameData_StopTheBalls)Application_Base.getInstance().getGameData()).count_killed_balls++;
 
-
-		/*if (true) {
-
-			return;
-		}*/
-
+		((GameData_StopTheBalls)Application_Base.getInstance().getGameData()).count_leaking_balloons_current_level++;
 
 		//Create Animation
 

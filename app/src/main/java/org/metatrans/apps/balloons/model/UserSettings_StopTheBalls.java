@@ -6,6 +6,7 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 
 import org.metatrans.apps.balloons.cfg.world.ConfigurationUtils_Level;
+import org.metatrans.apps.balloons.menu.ConfigurationUtils_WorldView;
 import org.metatrans.commons.cfg.colours.IConfigurationColours;
 import org.metatrans.commons.graphics2d.model.UserSettings;
 
@@ -14,16 +15,18 @@ public class UserSettings_StopTheBalls extends UserSettings {
 	
 	
 	private static final long serialVersionUID = 3199714911195754477L;
-	
-	
+
+
+	public int cfg_id_worldview;
+
+
 	public UserSettings_StopTheBalls() {
 		
 		super();
-		
-		uiColoursID 		= IConfigurationColours.CFG_COLOUR_BLUE_SKY_ON_GRAY;
-		modeID 				= ConfigurationUtils_Level.LEVEL_ID_DEFAULT;
-		
-		//fixFields("constructor");
+
+		cfg_id_worldview 		= ConfigurationUtils_WorldView.START_INDEX;
+		uiColoursID 			= IConfigurationColours.CFG_COLOUR_BLUE_SKY_ON_GRAY;
+		modeID 					= ConfigurationUtils_Level.LEVEL_ID_DEFAULT;
 	}
 	
 	
@@ -54,6 +57,12 @@ public class UserSettings_StopTheBalls extends UserSettings {
 	    
 		if (modeID == 0) {
 			modeID = ConfigurationUtils_Level.LEVEL_ID_DEFAULT;
+			System.out.println("UserSettings: " + op + " - updating mode id");
+		}
+
+		if (cfg_id_worldview == 0) {
+			cfg_id_worldview = ConfigurationUtils_WorldView.START_INDEX;
+			System.out.println("UserSettings: " + op + " - updating space_objects id");
 		}
 	}
 }

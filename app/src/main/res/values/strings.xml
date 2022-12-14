@@ -3,4 +3,9 @@
 
     <string name="balls">Balloons</string>
 
+    <string name="worldview">World View</string>
+    <string name="background_fortress">Fortress</string>
+    <string name="background_gradient">Gradient</string>
+    <string name="background_brickwall">Brick-wall</string>
+
 </resources>

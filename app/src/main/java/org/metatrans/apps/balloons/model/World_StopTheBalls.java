@@ -13,8 +13,8 @@ import org.metatrans.commons.graphics2d.model.World;
 import org.metatrans.commons.graphics2d.model.entities.Entity2D_Bullet;
 import org.metatrans.commons.graphics2d.model.entities.Entity2D_Challenger;
 import org.metatrans.commons.graphics2d.model.entities.Entity2D_Moving;
-import org.metatrans.commons.graphics2d.model.entities.I2DBitmapCache;
 import org.metatrans.commons.graphics2d.model.entities.IEntity2D;
+import org.metatrans.commons.model.I2DBitmapCache;
 
 import android.content.Context;
 import android.graphics.RectF;
@@ -41,11 +41,9 @@ public class World_StopTheBalls extends World {
 	private Entity2D_Moving loaded_bulletEntity;
 
 
-	public World_StopTheBalls(Context _activity, int _maze_size_x, int _maze_size_y, int cell_size) {
+	public World_StopTheBalls(Context _activity, int _maze_size_x, int _maze_size_y) {
 		
 		super(_activity, _maze_size_x, _maze_size_y);
-
-		setCellSize(cell_size);
 
 		SPEED_MAX_CHALLENGER = 1 * SPEED_MAX_CHALLENGER / 2;
 		

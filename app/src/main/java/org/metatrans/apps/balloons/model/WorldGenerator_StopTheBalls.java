@@ -4,6 +4,7 @@ package org.metatrans.apps.balloons.model;
 import org.metatrans.apps.balloons.cfg.world.IConfigurationWorld;
 import org.metatrans.apps.balloons.model.entities.Entity2D_Challenger_StopTheBalls;
 import org.metatrans.apps.balloons.model.entities.Entity2D_Player_StopTheBalls;
+import org.metatrans.apps.balloons.model.entities.Entity2D_Terrain_Balloons;
 import org.metatrans.commons.graphics2d.model.World;
 import org.metatrans.commons.graphics2d.model.entities.Entity2D_Moving;
 import org.metatrans.commons.ui.utils.ScreenUtils;
@@ -15,19 +16,19 @@ import android.graphics.RectF;
 public class WorldGenerator_StopTheBalls {
 
 
-	public static int LAST_BALLOONS_COUNT = 55555;
+	public static final int getBalloonsCount_Reduced(float scaleFactor) {
+
+		int all_balloons = getBalloonsCount(scaleFactor);
+
+		all_balloons = all_balloons - (int) (0.25f * all_balloons);
+
+		return all_balloons;
+	}
 
 
-	public static final int getBalloonsCount(float scaleFactor) {
+	private static final int getBalloonsCount(float scaleFactor) {
 
-		LAST_BALLOONS_COUNT = (int) (25 * scaleFactor);
-
-		if (LAST_BALLOONS_COUNT < 0) {
-
-			LAST_BALLOONS_COUNT = 0;
-		}
-
-		return LAST_BALLOONS_COUNT;
+		return (int) (25 * scaleFactor);
 	}
 
 
@@ -40,49 +41,34 @@ public class WorldGenerator_StopTheBalls {
 		float spaceScaleFactor = cfg_world.getSpaceMultiplier();
 
 		int[] screen_size = ScreenUtils.getScreenSize(activity);
-		int main_width = (int) (1 * Math.max(screen_size[0], screen_size[1]));
-		int main_height = (int) (1 * Math.min(screen_size[0], screen_size[1]));
+		int main_width = Math.max(screen_size[0], screen_size[1]);
+		int main_height = Math.min(screen_size[0], screen_size[1]);
 
 		int cell_size = main_width / 17;
 
 		//World_StopTheBalls world = new World_StopTheBalls(activity, (int) (spaceScaleFactor * main_width), (int) (spaceScaleFactor * main_height));
-		World_StopTheBalls world = new World_StopTheBalls(activity, 1, 1, cell_size);
+		World_StopTheBalls world = new World_StopTheBalls(activity, 1, 1);
+		world.setCellSize(cell_size);
 
 
-		Entity2D_Moving.ENVELOP_DRAW_UPSIDE = 0.5f;
-		Entity2D_Moving.ENVELOP_DRAW_DOWNSIDE = 1 - Entity2D_Moving.ENVELOP_DRAW_UPSIDE;
-		Entity2D_Moving.ENVELOP_DRAW_EXTENSION = 1;
-
-
-		float total_scale = 2.5f;
+		float total_scale = 2.25f;
 
 		float player_scale = 1f * total_scale;
 
 		float player_size = player_scale * cell_size;
 
-		world.addEntity(
-
-				new Entity2D_Player_StopTheBalls(
-
-						world,
-						new RectF(
-								spaceScaleFactor * main_width / 2 -  player_size / 2,
-								spaceScaleFactor * main_height / 2 - player_size / 2,
-								spaceScaleFactor * main_width / 2 + player_size / 2,
-								spaceScaleFactor * main_height / 2 + player_size / 2
-						),
-						world.getKillersEntities_forPlayer()
-				)
-		);
+		float space_center_x = spaceScaleFactor * main_width / 2;
+		float space_center_y = spaceScaleFactor * main_height / 2;
 
 
 		System.out.println("GAMEDATA GENERATION: Balloons count is " + getBalloonsCount(spaceScaleFactor));
 
-		RectF rect_screen = new RectF(
-				spaceScaleFactor * main_width/ 2  - main_width / 2,
-				spaceScaleFactor * main_height/ 2 - main_height / 2,
-				spaceScaleFactor * main_width / 2 + main_width / 2,
-				spaceScaleFactor * main_height / 2 + main_height / 2);
+		RectF screen_rectangle = new RectF(
+				space_center_x - main_width / 2,
+				space_center_y - main_height / 2,
+				space_center_x + main_width / 2,
+				space_center_y + main_height / 2
+		);
 
 		for (int i = 0; i < getBalloonsCount(spaceScaleFactor); i++) {
 
@@ -97,7 +83,7 @@ public class WorldGenerator_StopTheBalls {
 
 			RectF rect = new RectF(x, y, x + balloon_size, y + balloon_size);
 
-			if (rect_screen.contains(rect) || RectF.intersects(rect_screen, rect)) {
+			if (screen_rectangle.contains(rect) || RectF.intersects(screen_rectangle, rect)) {
 
 				i--;
 
@@ -112,8 +98,8 @@ public class WorldGenerator_StopTheBalls {
 						rect,
 						world.getGroundEntities(),
 						world.getKillersEntities_forChallengers(),
-						world.getPlayerEntity().getEnvelop().left,
-						world.getPlayerEntity().getEnvelop().top,
+						space_center_x,
+						space_center_y,
 						cfg_world.getSpeedMultiplier(),
 						cfg_world.getBitmapBalloons_Random()
 					)
@@ -122,10 +108,37 @@ public class WorldGenerator_StopTheBalls {
 		}
 
 
+		world.addEntity(
+
+				new Entity2D_Terrain_Balloons(
+
+						world
+				)
+		);
+
+
 		for (Entity2D_Moving moving: world.getMovingEntities()) {
 
 			moving.setWorldSize(world.get_WORLD_SIZE_X(), world.get_WORLD_SIZE_Y());
 		}
+
+		RectF player_rectangle = new RectF(
+				space_center_x - player_size / 2,
+				space_center_y - player_size / 2,
+				space_center_x + player_size / 2,
+				space_center_y + player_size / 2
+		);
+
+
+		world.addEntity(
+
+				new Entity2D_Player_StopTheBalls(
+
+						world,
+						player_rectangle,
+						world.getKillersEntities_forPlayer()
+				)
+		);
 
 
 		return world;

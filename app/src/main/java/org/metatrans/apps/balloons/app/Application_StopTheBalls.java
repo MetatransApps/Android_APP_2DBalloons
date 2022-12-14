@@ -4,6 +4,7 @@ package org.metatrans.apps.balloons.app;
 import org.metatrans.apps.balloons.achievements.AchievementsManager_StopTheBalls;
 import org.metatrans.apps.balloons.cfg.app.AppConfig_StopTheBalls;
 import org.metatrans.apps.balloons.cfg.world.ConfigurationUtils_Level;
+import org.metatrans.apps.balloons.cfg.world.IConfigurationWorld;
 import org.metatrans.apps.balloons.events.EventsManager_StopTheBalls;
 import org.metatrans.apps.balloons.lib.BuildConfig;
 import org.metatrans.apps.balloons.main.Activity_Result;
@@ -20,10 +21,10 @@ import org.metatrans.commons.engagement.ILeaderboardsProvider;
 import org.metatrans.commons.engagement.leaderboards.LeaderboardsProvider_Base;
 import org.metatrans.commons.events.api.IEventsManager;
 import org.metatrans.commons.graphics2d.app.Application_2D_Base;
-import org.metatrans.commons.graphics2d.model.BitmapCache_Base;
 import org.metatrans.commons.graphics2d.model.IWorld;
-import org.metatrans.commons.graphics2d.model.entities.I2DBitmapCache;
+import org.metatrans.commons.model.BitmapCache_Base;
 import org.metatrans.commons.model.GameData_Base;
+import org.metatrans.commons.model.I2DBitmapCache;
 import org.metatrans.commons.model.UserSettings_Base;
 import org.metatrans.commons.ui.utils.DebugUtils;
 
@@ -88,7 +89,17 @@ public abstract class Application_StopTheBalls extends Application_2D_Base {
 	
 	@Override
 	public IWorld createNewWorld() {
-		return WorldGenerator_StopTheBalls.generate(this, ConfigurationUtils_Level.getInstance().getConfigByID(Application_Base.getInstance().getUserSettings().modeID));
+
+		int level_id = Application_Base.getInstance().getUserSettings().modeID;
+
+		IConfigurationWorld cfg_world = ConfigurationUtils_Level.getInstance().getConfigByID(level_id);
+
+		if (cfg_world == null) {
+
+			throw new IllegalStateException("No cfg for level_id=" + level_id);
+		}
+
+		return WorldGenerator_StopTheBalls.generate(this, cfg_world);
 	}
 	
 	
@@ -96,11 +107,11 @@ public abstract class Application_StopTheBalls extends Application_2D_Base {
 	public GameData_Base createGameDataObject() {
 		
 		System.out.println("GAMEDATA CREATE");
-		
+
 		GameData_StopTheBalls result = new GameData_StopTheBalls();
-		
-		int levelID = getUserSettings().modeID;
-		result.world = WorldGenerator_StopTheBalls.generate(this, ConfigurationUtils_Level.getInstance().getConfigByID(levelID));
+
+		result.world = createNewWorld();
+		//result.world.
 		
 		result.timestamp_lastborn = System.currentTimeMillis();
 		

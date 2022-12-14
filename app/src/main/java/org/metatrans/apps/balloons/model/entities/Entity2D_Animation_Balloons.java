@@ -60,7 +60,7 @@ public class Entity2D_Animation_Balloons extends Entity2D_Animation {
 
         float adjustment = (float) (value * (percent * (0.5f - Math.random())));
 
-        System.out.println("adjustByMaxPercent: adjustment=" + adjustment);
+        //System.out.println("adjustByMaxPercent: adjustment=" + adjustment);
 
         float value_adjusted = value + adjustment;
 
