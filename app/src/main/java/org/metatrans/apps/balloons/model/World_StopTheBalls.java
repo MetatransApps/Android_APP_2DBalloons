@@ -7,8 +7,10 @@ import java.util.List;
 import org.metatrans.apps.balloons.cfg.world.ConfigurationUtils_Level;
 import org.metatrans.apps.balloons.cfg.world.IConfigurationWorld;
 import org.metatrans.apps.balloons.model.entities.Entity2D_Bullet_StopTheBalls;
+import org.metatrans.apps.balloons.model.entities.Entity2D_Challenger_StopTheBalls;
 import org.metatrans.apps.balloons.model.entities.Entity2D_Player_StopTheBalls;
 import org.metatrans.commons.app.Application_Base;
+import org.metatrans.commons.cfg.colours.ConfigurationUtils_Colours;
 import org.metatrans.commons.graphics2d.model.World;
 import org.metatrans.commons.graphics2d.model.entities.Entity2D_Bullet;
 import org.metatrans.commons.graphics2d.model.entities.Entity2D_Challenger;
@@ -17,6 +19,9 @@ import org.metatrans.commons.graphics2d.model.entities.IEntity2D;
 import org.metatrans.commons.model.I2DBitmapCache;
 
 import android.content.Context;
+import android.graphics.Canvas;
+import android.graphics.Paint;
+import android.graphics.Rect;
 import android.graphics.RectF;
 
 
@@ -85,6 +90,7 @@ public class World_StopTheBalls extends World {
 
 		produce_shot_frequency_counter++;
 
+
 		if (loaded_bulletEntity != null) {
 
 			removeMovingEntity(loaded_bulletEntity);
@@ -93,6 +99,7 @@ public class World_StopTheBalls extends World {
 		loaded_bulletEntity = createBulletEntity();
 
 		addEntity(loaded_bulletEntity);
+
 
 		if (fire_on) {
 
@@ -171,16 +178,69 @@ public class World_StopTheBalls extends World {
 
 		IConfigurationWorld world_cfg = ConfigurationUtils_Level.getInstance().getConfigByID(Application_Base.getInstance().getUserSettings().modeID);
 
-		int bitmap_id = world_cfg.getBitmapArrows_Random();
+		float bullet_center_x = bulletEnvelop.left + (bulletEnvelop.right - bulletEnvelop.left) / 2;
+		float bullet_center_y = bulletEnvelop.top + (bulletEnvelop.bottom - bulletEnvelop.top) / 2;
+
+		Entity2D_Challenger_StopTheBalls closest_balloon = null;
+
+		List<Entity2D_Moving> moving_entities = getMovingEntities();
+
+		int DISTANCE_INC_STEP = 50;
+
+		int MAX_DISTANCE = (int) Math.max(get_WORLD_SIZE_X(), get_WORLD_SIZE_Y());
+
+		for (int distance = DISTANCE_INC_STEP; distance <= MAX_DISTANCE; distance += DISTANCE_INC_STEP) {
+
+			float bullet_infinity_target_x = bullet_center_x + pointer_x * distance;
+			float bullet_infinity_target_y = bullet_center_y + pointer_y * distance;
+
+			Segment ray = new Segment(
+					(int) bullet_center_x,
+					(int) bullet_center_y,
+					(int) bullet_infinity_target_x,
+					(int) bullet_infinity_target_y);
+
+			for (Entity2D_Moving cur: moving_entities) {
+
+				if (cur instanceof Entity2D_Challenger_StopTheBalls) {
+
+					if (Segment.intersects2(ray, cur.getEnvelop())) {
+
+						closest_balloon = (Entity2D_Challenger_StopTheBalls) cur;
+
+						break;
+					}
+				}
+			}
+
+			if (closest_balloon != null) {
+
+				break;
+			}
+		}
+
+
+		int balloon_bitmap_id;
+
+		if (closest_balloon == null) {
+
+			balloon_bitmap_id = BitmapCache_Balloons.BITMAP_ID_BALLOONS_GRAY_ORG;
+
+		} else {
+
+			balloon_bitmap_id = closest_balloon.getBitmapID();
+		}
+
+
+		int arrow_bitmap_id = world_cfg.getBitmapArrows_ByDirection(balloon_bitmap_id);
 
 		Entity2D_Moving bulletEntity = new Entity2D_Bullet_StopTheBalls(
 				this,
 				bulletEnvelop,
 				getGroundEntities_SolidOnly(), new ArrayList<>(),
-				bitmap_id,
+				arrow_bitmap_id,
 				getPlayerEntity().getRotationDegrees()
 		);
-
 
 		bulletEntity.setWorldSize(get_WORLD_SIZE_X(), get_WORLD_SIZE_Y());
 
@@ -253,5 +313,188 @@ public class World_StopTheBalls extends World {
 	protected List<IEntity2D> getKillersEntities_forChallengers() {
 
 		return killersEntities_forChallengers;
+	}
+
+
+	/**
+	 * Origin: 	stackoverflow.com
+	 * URL: 	https://stackoverflow.com/questions/9935533/android-java-how-to-check-if-a-rectangle-and-a-line-segment-intersect-without-li
+	 * Author: 	Oli Charlesworth
+	 */
+	private static class Segment {
+
+		int x1;
+		int y1;
+		int x2;
+		int y2;
+		double m;
+		double b;
+		boolean ishoriz;
+		boolean isvert;
+
+		public Segment(int x1s, int y1s, int x2s, int y2s) {
+			if (x1s > x2s) {
+				this.x1 = x2s;
+				this.x2 = x1s;
+			} else {
+				this.x1 = x1s;
+				this.x2 = x2s;
+			}
+			if (y1s > y2s) {
+				this.y1 = y2s;
+				this.y2 = y1s;
+			} else {
+				this.y1 = y1s;
+				this.y2 = y2s;
+			}
+			int ydif = y2s - y1s;
+			int xdif = x2s - x1s;
+			if (ydif == 0) {
+				this.ishoriz = true;
+				this.m = 0;
+				this.b = x1s;
+			} else if (xdif == 0) {
+				this.isvert = true;
+			} else {
+				this.m = (double) ydif / xdif;
+				double r = (double) ydif / xdif;
+				this.b = y1s - (r * x1s);
+				this.isvert = false;
+				this.ishoriz = false;
+			}
+		}
+
+		public static final boolean intersected(Segment s, Segment s2) {
+			if (s.ishoriz && s2.ishoriz) {
+				//parallel
+				return false;
+			}
+
+			if (s.isvert && s2.isvert) {
+				//parallel
+
+				return false;
+			}
+
+			if (s.isvert) {
+				//x is constant see if the x is on the other line
+				int x = s.x1;
+				//add 2 for round-off error
+				if (s2.x1 <= x + 2 && s2.x2 + 2 >= x) {
+					//solve and check if y is on both segments
+					int y = (int) ((s.m * x) + s.b);
+					if (s.y1 <= y + 2 && s.y2 + 2 >= y) {
+						if (s2.y1 <= y + 2 && s2.y2 + 2 >= y) {
+							return true;
+						}
+					}
+				}
+				return false;
+			}
+
+			if (s2.isvert) {
+				//x is constant see if the x is on the other line
+				int x = s2.x1;
+				//add 2 for round-off error
+				if (s.x1 <= x + 2 && s.x2 + 2 >= x) {
+					//solve and check if y is on both segments
+					int y = (int) ((s.m * x) + s.b);
+					if (s.y1 <= y + 2 && s.y2 + 2 >= y) {
+						if (s2.y1 <= y + 2 && s2.y2 + 2 >= y) {
+							return true;
+						}
+					}
+				}
+				return false;
+			}
+
+			if (s.ishoriz) {
+				//y is constant see if the y is on the other line
+				int y = s.y1;
+				//add 2 for round-off error
+				if (s2.y1 <= y + 2 && s2.y2 + 2 >= y) {
+					//solve and check if x is on both segments
+					int x = (int) ((y - s.b) / s.m);
+					if (s.x1 <= x + 2 && s.x2 + 2 >= x) {
+						if (s2.x1 <= x + 2 && s2.x2 + 2 >= x)
+							return true;
+					}
+					return false;
+				}
+			}
+
+			if (s2.ishoriz) {
+				//y is constant see if the y is on the other line
+				int y = s2.y1;
+				//add 2 for round-off error
+				if (s.y1 <= y + 2 && s.y2 + 2 >= y) {
+					//solve and check if x is on both segments
+					int x = (int) ((y - s.b) / s.m);
+					if (s.x1 <= x + 2 && s.x2 + 2 >= x) {
+						if (s2.x1 <= x + 2 && s2.x2 + 2 >= x)
+							return true;
+					}
+				}
+				return false;
+			}
+
+			if (s.m == s2.m) {
+				//parallel
+				return false;
+			}
+
+			// use substitution
+			// (s.m-s2.m)x=s2.b-s.b
+			int x = (int) (s.m - s2.m);
+			x = (int) ((s2.b - s.b) / x);
+			// find y
+			int y = (int) ((x * s.m) + s.b);
+			//check if the values are in between for both lines
+			//add 2 for round-off error
+			if (s.y1 <= y + 2) {
+				if (s.y2 + 2 >= y) {
+					if (s2.y1 <= y + 2) {
+						if (s2.y2 + 2 >= y) {
+							if (s.x1 <= x + 2) {
+								if (s.x2 + 2 >= x) {
+									if (s2.x1 <= x + 2) {
+										if (s2.x2 + 2 >= x) {
+											return true;
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			return false;
+		}
+
+		public static final boolean intersects2(Segment s, RectF r) {
+			//created lines of the rect
+			Segment top = new Segment((int) r.left, (int) r.top, (int) r.right, (int) r.top);
+			Segment left = new Segment((int) r.left, (int) r.top, (int) r.left, (int) r.bottom);
+			Segment bottom = new Segment((int) r.left, (int) r.bottom, (int) r.right, (int) r.bottom);
+			Segment right = new Segment((int) r.right, (int) r.top, (int) r.right, (int) r.bottom);
+			boolean topp = s.intersected(s, top);
+			if (topp) {
+				return true;
+			}
+			boolean leftp = s.intersected(s, left);
+			if (leftp) {
+				return true;
+			}
+			boolean bottomp = s.intersected(s, bottom);
+			if (bottomp) {
+				return true;
+			}
+			boolean rightp = s.intersected(s, right);
+			if (rightp) {
+				return true;
+			} else {
+				return false;
+			}
+		}
 	}
 }

@@ -16,5 +16,6 @@ public interface IConfigurationWorld extends IConfigurationDifficulty {
 
     int getBitmapBalloons_Random();
     int getBitmapArrows_Random();
+	int getBitmapArrows_ByDirection(int balloon_bitmap_id);
 	Color getBaseExplosionColor(int balloon_bitmap_id);
 }

@@ -109,6 +109,21 @@ public abstract class Configuration_World_Base implements IConfigurationWorld {
 
 
 	@Override
+	public int getBitmapArrows_ByDirection(int balloon_bitmap_id) {
+
+		for (int i = 0; i < BITMAP_IDS_BALLOONS.length; i++) {
+
+			if (BITMAP_IDS_BALLOONS[i] == balloon_bitmap_id) {
+
+				return BITMAP_IDS_ARROWS[i];
+			}
+		}
+
+		throw new IllegalStateException();
+	}
+
+
+	@Override
 	public Color getBaseExplosionColor(int balloon_bitmap_id) {
 
 		int index = -1;

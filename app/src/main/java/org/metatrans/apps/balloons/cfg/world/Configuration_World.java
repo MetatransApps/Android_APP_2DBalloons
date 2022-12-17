@@ -1,8 +1,6 @@
 package org.metatrans.apps.balloons.cfg.world;
 
 
-import android.graphics.Color;
-
 import org.metatrans.apps.balloons.lib.R;
 import org.metatrans.apps.balloons.model.WorldGenerator_StopTheBalls;
 import org.metatrans.commons.app.Application_Base;
