@@ -104,13 +104,21 @@ public class BitmapCache_Balloons extends BitmapCache_Base {
 	public static final int BITMAP_ID_BALLOONS_VIOLET_PART_6 	= 850;
 
 
-	public static final int BITMAP_ID_BALLOONS_BACKGROUND_GRADIENT 	= 1000;
-	public static final int BITMAP_ID_BALLOONS_BACKGROUND_BRICKWALL	= 1100;
-	public static final int BITMAP_ID_BALLOONS_BACKGROUND_FORTRESS	= 1200;
+	public static final int BITMAP_ID_BALLOONS_BACKGROUND_GRADIENT_BLUE 	= 1000;
+	public static final int BITMAP_ID_BALLOONS_BACKGROUND_GRADIENT_GREEN 	= 1010;
+	public static final int BITMAP_ID_BALLOONS_BACKGROUND_GRADIENT_PINK 	= 1020;
+	public static final int BITMAP_ID_BALLOONS_BACKGROUND_BRICKWALL_BLUE	= 1100;
+	public static final int BITMAP_ID_BALLOONS_BACKGROUND_BRICKWALL_GREEN	= 1110;
+	public static final int BITMAP_ID_BALLOONS_BACKGROUND_BRICKWALL_RED		= 1120;
+	public static final int BITMAP_ID_BALLOONS_BACKGROUND_FORTRESS			= 1200;
 
-	public static final int BITMAP_ID_BALLOONS_ICON_GRADIENT 		= 1300;
-	public static final int BITMAP_ID_BALLOONS_ICON_BRICKWALL		= 1400;
-	public static final int BITMAP_ID_BALLOONS_ICON_FORTRESS		= 1500;
+	public static final int BITMAP_ID_BALLOONS_ICON_GRADIENT_BLUE 			= 1300;
+	public static final int BITMAP_ID_BALLOONS_ICON_GRADIENT_GREEN 			= 1310;
+	public static final int BITMAP_ID_BALLOONS_ICON_GRADIENT_PINK 			= 1320;
+	public static final int BITMAP_ID_BALLOONS_ICON_BRICKWALL_BLUE			= 1400;
+	public static final int BITMAP_ID_BALLOONS_ICON_BRICKWALL_GREEN			= 1420;
+	public static final int BITMAP_ID_BALLOONS_ICON_BRICKWALL_RED			= 1430;
+	public static final int BITMAP_ID_BALLOONS_ICON_FORTRESS				= 1500;
 
 
 	public BitmapCache_Balloons(Integer cache_id) {
@@ -397,26 +405,51 @@ public class BitmapCache_Balloons extends BitmapCache_Base {
 
 
 		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).add(
-				BitmapCache_Balloons.BITMAP_ID_BALLOONS_ICON_GRADIENT,
-				BitmapUtils.fromResource(Application_Base.getInstance(), R.drawable.ic_balloons_icon_gradient));
+				BitmapCache_Balloons.BITMAP_ID_BALLOONS_ICON_GRADIENT_BLUE,
+				BitmapUtils.fromResource(Application_Base.getInstance(), R.drawable.ic_balloons_icon_gradient_blue));
 		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).add(
-				BitmapCache_Balloons.BITMAP_ID_BALLOONS_ICON_BRICKWALL,
-				BitmapUtils.fromResource(Application_Base.getInstance(), R.drawable.ic_balloons_icon_brickwall));
+				BitmapCache_Balloons.BITMAP_ID_BALLOONS_ICON_GRADIENT_GREEN,
+				BitmapUtils.fromResource(Application_Base.getInstance(), R.drawable.ic_balloons_icon_gradient_green));
+		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).add(
+				BitmapCache_Balloons.BITMAP_ID_BALLOONS_ICON_GRADIENT_PINK,
+				BitmapUtils.fromResource(Application_Base.getInstance(), R.drawable.ic_balloons_icon_gradient_pink));
+
+		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).add(
+				BitmapCache_Balloons.BITMAP_ID_BALLOONS_ICON_BRICKWALL_BLUE,
+				BitmapUtils.fromResource(Application_Base.getInstance(), R.drawable.ic_balloons_icon_brickwall_blue));
+		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).add(
+				BitmapCache_Balloons.BITMAP_ID_BALLOONS_ICON_BRICKWALL_GREEN,
+				BitmapUtils.fromResource(Application_Base.getInstance(), R.drawable.ic_balloons_icon_brickwall_green));
+		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).add(
+				BitmapCache_Balloons.BITMAP_ID_BALLOONS_ICON_BRICKWALL_RED,
+				BitmapUtils.fromResource(Application_Base.getInstance(), R.drawable.ic_balloons_icon_brickwall_red));
+
 		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).add(
 				BitmapCache_Balloons.BITMAP_ID_BALLOONS_ICON_FORTRESS,
 				BitmapUtils.fromResource(Application_Base.getInstance(), R.drawable.ic_balloons_icon_fortress_v5));
 
 		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).add(
-				BitmapCache_Balloons.BITMAP_ID_BALLOONS_BACKGROUND_GRADIENT,
-				BitmapUtils.fromResource(Application_Base.getInstance(), R.drawable.ic_background_gradient),
-				false);
+				BitmapCache_Balloons.BITMAP_ID_BALLOONS_BACKGROUND_GRADIENT_BLUE,
+				BitmapUtils.fromResource(Application_Base.getInstance(), R.drawable.ic_background_gradient_blue));
 		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).add(
-				BitmapCache_Balloons.BITMAP_ID_BALLOONS_BACKGROUND_BRICKWALL,
-				BitmapUtils.fromResource(Application_Base.getInstance(), R.drawable.ic_background_brickwall),
-				false);
+				BitmapCache_Balloons.BITMAP_ID_BALLOONS_BACKGROUND_GRADIENT_GREEN,
+				BitmapUtils.fromResource(Application_Base.getInstance(), R.drawable.ic_background_gradient_green));
+		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).add(
+				BitmapCache_Balloons.BITMAP_ID_BALLOONS_BACKGROUND_GRADIENT_PINK,
+				BitmapUtils.fromResource(Application_Base.getInstance(), R.drawable.ic_background_gradient_pink));
+
+		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).add(
+				BitmapCache_Balloons.BITMAP_ID_BALLOONS_BACKGROUND_BRICKWALL_BLUE,
+				BitmapUtils.fromResource(Application_Base.getInstance(), R.drawable.ic_background_brickwall_blue));
+		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).add(
+				BitmapCache_Balloons.BITMAP_ID_BALLOONS_BACKGROUND_BRICKWALL_GREEN,
+				BitmapUtils.fromResource(Application_Base.getInstance(), R.drawable.ic_background_brickwall_green));
+		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).add(
+				BitmapCache_Balloons.BITMAP_ID_BALLOONS_BACKGROUND_BRICKWALL_RED,
+				BitmapUtils.fromResource(Application_Base.getInstance(), R.drawable.ic_background_brickwall_red));
+
 		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).add(
 				BitmapCache_Balloons.BITMAP_ID_BALLOONS_BACKGROUND_FORTRESS,
-				BitmapUtils.fromResource(Application_Base.getInstance(), R.drawable.ic_background_fortress_v3),
-				false);
+				BitmapUtils.fromResource(Application_Base.getInstance(), R.drawable.ic_background_fortress_v3));
 	}
 }

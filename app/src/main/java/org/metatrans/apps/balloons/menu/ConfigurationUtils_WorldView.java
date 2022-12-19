@@ -19,11 +19,15 @@ public class ConfigurationUtils_WorldView {
 
 	static {
 
-		ALL_CFGs = new org.metatrans.apps.balloons.menu.IConfiguration_WorldView[3];
+		ALL_CFGs = new org.metatrans.apps.balloons.menu.IConfiguration_WorldView[7];
 
 		ALL_CFGs[0] = new Config_WorldView(START_INDEX + 0, R.string.background_fortress, -1, BitmapCache_Balloons.BITMAP_ID_BALLOONS_BACKGROUND_FORTRESS, BitmapCache_Balloons.BITMAP_ID_BALLOONS_ICON_FORTRESS);
-		ALL_CFGs[1] = new Config_WorldView(START_INDEX + 1, R.string.background_gradient, -1, BitmapCache_Balloons.BITMAP_ID_BALLOONS_BACKGROUND_GRADIENT, BitmapCache_Balloons.BITMAP_ID_BALLOONS_ICON_GRADIENT);
-		ALL_CFGs[2] = new Config_WorldView(START_INDEX + 2, R.string.background_brickwall, -1, BitmapCache_Balloons.BITMAP_ID_BALLOONS_BACKGROUND_BRICKWALL, BitmapCache_Balloons.BITMAP_ID_BALLOONS_ICON_BRICKWALL);
+		ALL_CFGs[1] = new Config_WorldView(START_INDEX + 1, R.string.background_gradient_v1, -1, BitmapCache_Balloons.BITMAP_ID_BALLOONS_BACKGROUND_GRADIENT_BLUE, BitmapCache_Balloons.BITMAP_ID_BALLOONS_ICON_GRADIENT_BLUE);
+		ALL_CFGs[2] = new Config_WorldView(START_INDEX + 2, R.string.background_brickwall_v1, -1, BitmapCache_Balloons.BITMAP_ID_BALLOONS_BACKGROUND_BRICKWALL_BLUE, BitmapCache_Balloons.BITMAP_ID_BALLOONS_ICON_BRICKWALL_BLUE);
+		ALL_CFGs[3] = new Config_WorldView(START_INDEX + 3, R.string.background_gradient_v2, -1, BitmapCache_Balloons.BITMAP_ID_BALLOONS_BACKGROUND_GRADIENT_GREEN, BitmapCache_Balloons.BITMAP_ID_BALLOONS_ICON_GRADIENT_GREEN);
+		ALL_CFGs[4] = new Config_WorldView(START_INDEX + 4, R.string.background_brickwall_v2, -1, BitmapCache_Balloons.BITMAP_ID_BALLOONS_BACKGROUND_BRICKWALL_GREEN, BitmapCache_Balloons.BITMAP_ID_BALLOONS_ICON_BRICKWALL_GREEN);
+		ALL_CFGs[5] = new Config_WorldView(START_INDEX + 5, R.string.background_gradient_v3, -1, BitmapCache_Balloons.BITMAP_ID_BALLOONS_BACKGROUND_GRADIENT_PINK, BitmapCache_Balloons.BITMAP_ID_BALLOONS_ICON_GRADIENT_PINK);
+		ALL_CFGs[6] = new Config_WorldView(START_INDEX + 6, R.string.background_brickwall_v3, -1, BitmapCache_Balloons.BITMAP_ID_BALLOONS_BACKGROUND_BRICKWALL_RED, BitmapCache_Balloons.BITMAP_ID_BALLOONS_ICON_BRICKWALL_RED);
 	}
 
 	private static final Map<Integer, IConfiguration_WorldView> mapping = new HashMap<Integer, IConfiguration_WorldView>();

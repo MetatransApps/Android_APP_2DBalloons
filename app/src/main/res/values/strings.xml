@@ -4,8 +4,15 @@
     <string name="balls">Balloons</string>
 
     <string name="worldview">World View</string>
+
     <string name="background_fortress">Fortress</string>
-    <string name="background_gradient">Gradient</string>
-    <string name="background_brickwall">Brick-wall</string>
+
+    <string name="background_gradient_v1">Gradient V1</string>
+    <string name="background_gradient_v2">Gradient V2</string>
+    <string name="background_gradient_v3">Gradient V3</string>
+
+    <string name="background_brickwall_v1">Brick-wall V1</string>
+    <string name="background_brickwall_v2">Brick-wall V2</string>
+    <string name="background_brickwall_v3">Brick-wall V3</string>
 
 </resources>
