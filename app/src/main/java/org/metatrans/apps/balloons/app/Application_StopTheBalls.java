@@ -2,7 +2,6 @@ package org.metatrans.apps.balloons.app;
 
 
 import org.metatrans.apps.balloons.achievements.AchievementsManager_StopTheBalls;
-import org.metatrans.apps.balloons.cfg.app.AppConfig_StopTheBalls;
 import org.metatrans.apps.balloons.cfg.world.ConfigurationUtils_Level;
 import org.metatrans.apps.balloons.cfg.world.IConfigurationWorld;
 import org.metatrans.apps.balloons.events.EventsManager_StopTheBalls;
@@ -14,7 +13,6 @@ import org.metatrans.apps.balloons.model.UserSettings_StopTheBalls;
 import org.metatrans.apps.balloons.model.WorldGenerator_StopTheBalls;
 import org.metatrans.commons.achievements.IAchievementsManager;
 import org.metatrans.commons.app.Application_Base;
-import org.metatrans.commons.cfg.app.IAppConfig;
 import org.metatrans.commons.cfg.colours.ConfigurationUtils_Colours;
 import org.metatrans.commons.cfg.menu.ConfigurationUtils_Base_MenuMain;
 import org.metatrans.commons.engagement.ILeaderboardsProvider;
@@ -30,10 +28,7 @@ import org.metatrans.commons.ui.utils.DebugUtils;
 
 
 public abstract class Application_StopTheBalls extends Application_2D_Base {
-	
-	
-	protected IAppConfig appConfig 					= new AppConfig_StopTheBalls();
-	
+
 	
 	@Override
 	public void onCreate() {
@@ -53,13 +48,7 @@ public abstract class Application_StopTheBalls extends Application_2D_Base {
 
 		BitmapCache_Base.STATIC.initBitmaps();
 	}
-	
-	
-	@Override
-	public IAppConfig getAppConfig() {
-		return appConfig;
-	}
-	
+
 	
 	@Override
 	protected IAchievementsManager createAchievementsManager() {
