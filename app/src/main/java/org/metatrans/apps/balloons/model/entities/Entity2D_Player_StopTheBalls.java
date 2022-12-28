@@ -160,7 +160,6 @@ public class Entity2D_Player_StopTheBalls extends Entity2D_Player {
 				killedFinal();
 
 				getGameData().count_lives = 0;
-
 			}
 		}
 	}
