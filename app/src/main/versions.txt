@@ -1,3 +1,15 @@
+1.1.0 [PAID] (28.12.2022)
+Final compatibility hotfix for existing users - game model version increased and model re-creation re-enforced.
+
+1.1.7 (28.12.2022)
+Final compatibility hotfix for existing users - game model version increased and model re-creation re-enforced.
+
+1.1.6 (24.12.2022)
+Compatibility hotfix for existing users – re-create and save new game data, because the save one is not compatible with the new model.
+
+1.0.9 [PAID] (24.12.2022)
+Compatibility hotfix for existing users – re-create and save new game data, because the save one is not compatible with the new model.
+
 1.1.4 (18.12.2022)
 Better compliance with the app store policies.
 New graphical design of the game assets - new balloons, arrows, crossbow and amazing backgrounds. Is it the same game?
