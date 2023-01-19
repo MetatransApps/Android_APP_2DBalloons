@@ -134,321 +134,322 @@ public class BitmapCache_Balloons extends BitmapCache_Base {
 		System.out.println("!EXPENSIVE OP: RE-INIT BITMAPS OF THE WORLD");
 
 
-		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).add(
+		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).addAsset(
 				BitmapCache_Balloons.BITMAP_ID_LEVEL,
 				BitmapUtils.fromResource(Application_Base.getInstance(), R.drawable.ic_level));
 
 
-		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).add(
+		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).addAsset(
 				BitmapCache_Balloons.BITMAP_ID_CROSSBOW_1,
 				BitmapUtils.fromResource(Application_Base.getInstance(), R.drawable.ic_crossbow_unloaded_v2));
-		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).add(
+		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).addAsset(
 				BitmapCache_Balloons.BITMAP_ID_CROSSBOW_2,
 				BitmapUtils.fromResource(Application_Base.getInstance(), R.drawable.ic_crossbow_loaded_v2));
 		//bitmap_player   	= BitmapUtils.fromResource(Application_Base.getInstance(), R.drawable.ic_ball_green);
 		//bitmap_player   	= BitmapUtils.fromResource(Application_Base.getInstance(), R.drawable.ic_color_circle);
 
 
-		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).add(
+		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).addAsset(
 				BitmapCache_Balloons.BITMAP_ID_BALLOONS_BLUE_ORG,
 				BitmapUtils.fromResource(Application_Base.getInstance(), R.drawable.ic_balloon_blue));
-		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).add(
+		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).addAsset(
 				BitmapCache_Balloons.BITMAP_ID_BALLOONS_INDIGO_ORG,
 				BitmapUtils.fromResource(Application_Base.getInstance(), R.drawable.ic_balloon_indigo));
-		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).add(
+		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).addAsset(
 				BitmapCache_Balloons.BITMAP_ID_BALLOONS_VIOLET_ORG,
 				BitmapUtils.fromResource(Application_Base.getInstance(), R.drawable.ic_balloon_violet));
-		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).add(
+		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).addAsset(
 				BitmapCache_Balloons.BITMAP_ID_BALLOONS_BLACK_ORG,
 				BitmapUtils.fromResource(Application_Base.getInstance(), R.drawable.ic_balloon_black));
-		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).add(
+		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).addAsset(
 				BitmapCache_Balloons.BITMAP_ID_BALLOONS_WHITE_ORG,
 				BitmapUtils.fromResource(Application_Base.getInstance(), R.drawable.ic_balloon_white));
-		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).add(
+		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).addAsset(
 				BitmapCache_Balloons.BITMAP_ID_BALLOONS_GRAY_ORG,
 				BitmapUtils.fromResource(Application_Base.getInstance(), R.drawable.ic_balloon_gray));
-		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).add(
+		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).addAsset(
 				BitmapCache_Balloons.BITMAP_ID_BALLOONS_RED_ORG,
 				BitmapUtils.fromResource(Application_Base.getInstance(), R.drawable.ic_balloon_red));
-		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).add(
+		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).addAsset(
 				BitmapCache_Balloons.BITMAP_ID_BALLOONS_GREEN_ORG,
 				BitmapUtils.fromResource(Application_Base.getInstance(), R.drawable.ic_balloon_green));
-		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).add(
+		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).addAsset(
 				BitmapCache_Balloons.BITMAP_ID_BALLOONS_YELLOW_ORG,
 				BitmapUtils.fromResource(Application_Base.getInstance(), R.drawable.ic_balloon_yellow));
-		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).add(
+		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).addAsset(
 				BitmapCache_Balloons.BITMAP_ID_BALLOONS_ORANGE_ORG,
 				BitmapUtils.fromResource(Application_Base.getInstance(), R.drawable.ic_balloon_orange));
 
 
-		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).add(
+		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).addAsset(
 				BitmapCache_Balloons.BITMAP_ID_ARROWS_BLUE,
 				BitmapUtils.fromResource(Application_Base.getInstance(), R.drawable.ic_arrow_blue_v2));
-		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).add(
+		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).addAsset(
 				BitmapCache_Balloons.BITMAP_ID_ARROWS_INDIGO,
 				BitmapUtils.fromResource(Application_Base.getInstance(), R.drawable.ic_arrow_indigo_v2));
-		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).add(
+		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).addAsset(
 				BitmapCache_Balloons.BITMAP_ID_ARROWS_VIOLET,
 				BitmapUtils.fromResource(Application_Base.getInstance(), R.drawable.ic_arrow_violet_v2));
-		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).add(
+		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).addAsset(
 				BitmapCache_Balloons.BITMAP_ID_ARROWS_BLACK,
 				BitmapUtils.fromResource(Application_Base.getInstance(), R.drawable.ic_arrow_black_v2));
-		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).add(
+		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).addAsset(
 				BitmapCache_Balloons.BITMAP_ID_ARROWS_WHITE,
 				BitmapUtils.fromResource(Application_Base.getInstance(), R.drawable.ic_arrow_white_v2));
-		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).add(
+		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).addAsset(
 				BitmapCache_Balloons.BITMAP_ID_ARROWS_GRAY,
 				BitmapUtils.fromResource(Application_Base.getInstance(), R.drawable.ic_arrow_grey_v2));
-		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).add(
+		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).addAsset(
 				BitmapCache_Balloons.BITMAP_ID_ARROWS_RED,
 				BitmapUtils.fromResource(Application_Base.getInstance(), R.drawable.ic_arrow_red_v2));
-		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).add(
+		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).addAsset(
 				BitmapCache_Balloons.BITMAP_ID_ARROWS_GREEN,
 				BitmapUtils.fromResource(Application_Base.getInstance(), R.drawable.ic_arrow_green_v2));
-		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).add(
+		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).addAsset(
 				BitmapCache_Balloons.BITMAP_ID_ARROWS_YELLOW,
 				BitmapUtils.fromResource(Application_Base.getInstance(), R.drawable.ic_arrow_yellow_v2));
-		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).add(
+		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).addAsset(
 				BitmapCache_Balloons.BITMAP_ID_ARROWS_ORANGE,
 				BitmapUtils.fromResource(Application_Base.getInstance(), R.drawable.ic_arrow_orange_v2));
 
 
-		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).add(
+		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).addAsset(
 				BitmapCache_Balloons.BITMAP_ID_BALLOONS_INDIGO_PART_1,
 				BitmapUtils.fromResource(Application_Base.getInstance(), R.drawable.ic_balloon_indigo_step_0));
-		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).add(
+		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).addAsset(
 				BitmapCache_Balloons.BITMAP_ID_BALLOONS_INDIGO_PART_2,
 				BitmapUtils.fromResource(Application_Base.getInstance(), R.drawable.ic_balloon_indigo_step_1));
-		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).add(
+		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).addAsset(
 				BitmapCache_Balloons.BITMAP_ID_BALLOONS_INDIGO_PART_3,
 				BitmapUtils.fromResource(Application_Base.getInstance(), R.drawable.ic_balloon_indigo_step_2));
-		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).add(
+		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).addAsset(
 				BitmapCache_Balloons.BITMAP_ID_BALLOONS_INDIGO_PART_4,
 				BitmapUtils.fromResource(Application_Base.getInstance(), R.drawable.ic_balloon_indigo_step_3));
-		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).add(
+		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).addAsset(
 				BitmapCache_Balloons.BITMAP_ID_BALLOONS_INDIGO_PART_5,
 				BitmapUtils.fromResource(Application_Base.getInstance(), R.drawable.ic_balloon_indigo_step_4));
-		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).add(
+		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).addAsset(
 				BitmapCache_Balloons.BITMAP_ID_BALLOONS_INDIGO_PART_6,
 				BitmapUtils.fromResource(Application_Base.getInstance(), R.drawable.ic_balloon_indigo_step_5));
 
-		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).add(
+		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).addAsset(
 				BitmapCache_Balloons.BITMAP_ID_BALLOONS_BLUE_PART_1,
 				BitmapUtils.fromResource(Application_Base.getInstance(), R.drawable.ic_balloon_blue_step_0));
-		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).add(
+		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).addAsset(
 				BitmapCache_Balloons.BITMAP_ID_BALLOONS_BLUE_PART_2,
 				BitmapUtils.fromResource(Application_Base.getInstance(), R.drawable.ic_balloon_blue_step_1));
-		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).add(
+		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).addAsset(
 				BitmapCache_Balloons.BITMAP_ID_BALLOONS_BLUE_PART_3,
 				BitmapUtils.fromResource(Application_Base.getInstance(), R.drawable.ic_balloon_blue_step_2));
-		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).add(
+		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).addAsset(
 				BitmapCache_Balloons.BITMAP_ID_BALLOONS_BLUE_PART_4,
 				BitmapUtils.fromResource(Application_Base.getInstance(), R.drawable.ic_balloon_blue_step_3));
-		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).add(
+		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).addAsset(
 				BitmapCache_Balloons.BITMAP_ID_BALLOONS_BLUE_PART_5,
 				BitmapUtils.fromResource(Application_Base.getInstance(), R.drawable.ic_balloon_blue_step_4));
-		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).add(
+		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).addAsset(
 				BitmapCache_Balloons.BITMAP_ID_BALLOONS_BLUE_PART_6,
 				BitmapUtils.fromResource(Application_Base.getInstance(), R.drawable.ic_balloon_blue_step_5));
 
-		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).add(
+		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).addAsset(
 				BitmapCache_Balloons.BITMAP_ID_BALLOONS_VIOLET_PART_1,
 				BitmapUtils.fromResource(Application_Base.getInstance(), R.drawable.ic_balloon_violet_step_0));
-		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).add(
+		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).addAsset(
 				BitmapCache_Balloons.BITMAP_ID_BALLOONS_VIOLET_PART_2,
 				BitmapUtils.fromResource(Application_Base.getInstance(), R.drawable.ic_balloon_violet_step_1));
-		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).add(
+		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).addAsset(
 				BitmapCache_Balloons.BITMAP_ID_BALLOONS_VIOLET_PART_3,
 				BitmapUtils.fromResource(Application_Base.getInstance(), R.drawable.ic_balloon_violet_step_2));
-		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).add(
+		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).addAsset(
 				BitmapCache_Balloons.BITMAP_ID_BALLOONS_VIOLET_PART_4,
 				BitmapUtils.fromResource(Application_Base.getInstance(), R.drawable.ic_balloon_violet_step_3));
-		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).add(
+		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).addAsset(
 				BitmapCache_Balloons.BITMAP_ID_BALLOONS_VIOLET_PART_5,
 				BitmapUtils.fromResource(Application_Base.getInstance(), R.drawable.ic_balloon_violet_step_4));
-		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).add(
+		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).addAsset(
 				BitmapCache_Balloons.BITMAP_ID_BALLOONS_VIOLET_PART_6,
 				BitmapUtils.fromResource(Application_Base.getInstance(), R.drawable.ic_balloon_violet_step_5));
 
-		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).add(
+		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).addAsset(
 				BitmapCache_Balloons.BITMAP_ID_BALLOONS_BLACK_PART_1,
 				BitmapUtils.fromResource(Application_Base.getInstance(), R.drawable.ic_balloon_black_step_0));
-		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).add(
+		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).addAsset(
 				BitmapCache_Balloons.BITMAP_ID_BALLOONS_BLACK_PART_2,
 				BitmapUtils.fromResource(Application_Base.getInstance(), R.drawable.ic_balloon_black_step_1));
-		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).add(
+		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).addAsset(
 				BitmapCache_Balloons.BITMAP_ID_BALLOONS_BLACK_PART_3,
 				BitmapUtils.fromResource(Application_Base.getInstance(), R.drawable.ic_balloon_black_step_2));
-		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).add(
+		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).addAsset(
 				BitmapCache_Balloons.BITMAP_ID_BALLOONS_BLACK_PART_4,
 				BitmapUtils.fromResource(Application_Base.getInstance(), R.drawable.ic_balloon_black_step_3));
-		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).add(
+		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).addAsset(
 				BitmapCache_Balloons.BITMAP_ID_BALLOONS_BLACK_PART_5,
 				BitmapUtils.fromResource(Application_Base.getInstance(), R.drawable.ic_balloon_black_step_4));
-		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).add(
+		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).addAsset(
 				BitmapCache_Balloons.BITMAP_ID_BALLOONS_BLACK_PART_6,
 				BitmapUtils.fromResource(Application_Base.getInstance(), R.drawable.ic_balloon_black_step_5));
 
-		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).add(
+		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).addAsset(
 				BitmapCache_Balloons.BITMAP_ID_BALLOONS_WHITE_PART_1,
 				BitmapUtils.fromResource(Application_Base.getInstance(), R.drawable.ic_balloon_white_step_0));
-		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).add(
+		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).addAsset(
 				BitmapCache_Balloons.BITMAP_ID_BALLOONS_WHITE_PART_2,
 				BitmapUtils.fromResource(Application_Base.getInstance(), R.drawable.ic_balloon_white_step_1));
-		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).add(
+		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).addAsset(
 				BitmapCache_Balloons.BITMAP_ID_BALLOONS_WHITE_PART_3,
 				BitmapUtils.fromResource(Application_Base.getInstance(), R.drawable.ic_balloon_white_step_2));
-		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).add(
+		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).addAsset(
 				BitmapCache_Balloons.BITMAP_ID_BALLOONS_WHITE_PART_4,
 				BitmapUtils.fromResource(Application_Base.getInstance(), R.drawable.ic_balloon_white_step_3));
-		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).add(
+		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).addAsset(
 				BitmapCache_Balloons.BITMAP_ID_BALLOONS_WHITE_PART_5,
 				BitmapUtils.fromResource(Application_Base.getInstance(), R.drawable.ic_balloon_white_step_4));
-		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).add(
+		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).addAsset(
 				BitmapCache_Balloons.BITMAP_ID_BALLOONS_WHITE_PART_6,
 				BitmapUtils.fromResource(Application_Base.getInstance(), R.drawable.ic_balloon_white_step_5));
 
-		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).add(
+		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).addAsset(
 				BitmapCache_Balloons.BITMAP_ID_BALLOONS_GRAY_PART_1,
 				BitmapUtils.fromResource(Application_Base.getInstance(), R.drawable.ic_balloon_gray_step_0));
-		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).add(
+		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).addAsset(
 				BitmapCache_Balloons.BITMAP_ID_BALLOONS_GRAY_PART_2,
 				BitmapUtils.fromResource(Application_Base.getInstance(), R.drawable.ic_balloon_gray_step_1));
-		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).add(
+		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).addAsset(
 				BitmapCache_Balloons.BITMAP_ID_BALLOONS_GRAY_PART_3,
 				BitmapUtils.fromResource(Application_Base.getInstance(), R.drawable.ic_balloon_gray_step_2));
-		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).add(
+		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).addAsset(
 				BitmapCache_Balloons.BITMAP_ID_BALLOONS_GRAY_PART_4,
 				BitmapUtils.fromResource(Application_Base.getInstance(), R.drawable.ic_balloon_gray_step_3));
-		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).add(
+		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).addAsset(
 				BitmapCache_Balloons.BITMAP_ID_BALLOONS_GRAY_PART_5,
 				BitmapUtils.fromResource(Application_Base.getInstance(), R.drawable.ic_balloon_gray_step_4));
-		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).add(
+		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).addAsset(
 				BitmapCache_Balloons.BITMAP_ID_BALLOONS_GRAY_PART_6,
 				BitmapUtils.fromResource(Application_Base.getInstance(), R.drawable.ic_balloon_gray_step_5));
 
-		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).add(
+		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).addAsset(
 				BitmapCache_Balloons.BITMAP_ID_BALLOONS_RED_PART_1,
 				BitmapUtils.fromResource(Application_Base.getInstance(), R.drawable.ic_balloon_red_step_0));
-		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).add(
+		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).addAsset(
 				BitmapCache_Balloons.BITMAP_ID_BALLOONS_RED_PART_2,
 				BitmapUtils.fromResource(Application_Base.getInstance(), R.drawable.ic_balloon_red_step_1));
-		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).add(
+		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).addAsset(
 				BitmapCache_Balloons.BITMAP_ID_BALLOONS_RED_PART_3,
 				BitmapUtils.fromResource(Application_Base.getInstance(), R.drawable.ic_balloon_red_step_2));
-		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).add(
+		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).addAsset(
 				BitmapCache_Balloons.BITMAP_ID_BALLOONS_RED_PART_4,
 				BitmapUtils.fromResource(Application_Base.getInstance(), R.drawable.ic_balloon_red_step_3));
-		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).add(
+		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).addAsset(
 				BitmapCache_Balloons.BITMAP_ID_BALLOONS_RED_PART_5,
 				BitmapUtils.fromResource(Application_Base.getInstance(), R.drawable.ic_balloon_red_step_4));
-		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).add(
+		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).addAsset(
 				BitmapCache_Balloons.BITMAP_ID_BALLOONS_RED_PART_6,
 				BitmapUtils.fromResource(Application_Base.getInstance(), R.drawable.ic_balloon_red_step_5));
 
-		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).add(
+		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).addAsset(
 				BitmapCache_Balloons.BITMAP_ID_BALLOONS_GREEN_PART_1,
 				BitmapUtils.fromResource(Application_Base.getInstance(), R.drawable.ic_balloon_green_step_0));
-		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).add(
+		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).addAsset(
 				BitmapCache_Balloons.BITMAP_ID_BALLOONS_GREEN_PART_2,
 				BitmapUtils.fromResource(Application_Base.getInstance(), R.drawable.ic_balloon_green_step_1));
-		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).add(
+		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).addAsset(
 				BitmapCache_Balloons.BITMAP_ID_BALLOONS_GREEN_PART_3,
 				BitmapUtils.fromResource(Application_Base.getInstance(), R.drawable.ic_balloon_green_step_2));
-		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).add(
+		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).addAsset(
 				BitmapCache_Balloons.BITMAP_ID_BALLOONS_GREEN_PART_4,
 				BitmapUtils.fromResource(Application_Base.getInstance(), R.drawable.ic_balloon_green_step_3));
-		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).add(
+		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).addAsset(
 				BitmapCache_Balloons.BITMAP_ID_BALLOONS_GREEN_PART_5,
 				BitmapUtils.fromResource(Application_Base.getInstance(), R.drawable.ic_balloon_green_step_4));
-		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).add(
+		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).addAsset(
 				BitmapCache_Balloons.BITMAP_ID_BALLOONS_GREEN_PART_6,
 				BitmapUtils.fromResource(Application_Base.getInstance(), R.drawable.ic_balloon_green_step_5));
 
-		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).add(
+		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).addAsset(
 				BitmapCache_Balloons.BITMAP_ID_BALLOONS_YELLOW_PART_1,
 				BitmapUtils.fromResource(Application_Base.getInstance(), R.drawable.ic_balloon_yellow_step_0));
-		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).add(
+		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).addAsset(
 				BitmapCache_Balloons.BITMAP_ID_BALLOONS_YELLOW_PART_2,
 				BitmapUtils.fromResource(Application_Base.getInstance(), R.drawable.ic_balloon_yellow_step_1));
-		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).add(
+		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).addAsset(
 				BitmapCache_Balloons.BITMAP_ID_BALLOONS_YELLOW_PART_3,
 				BitmapUtils.fromResource(Application_Base.getInstance(), R.drawable.ic_balloon_yellow_step_2));
-		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).add(
+		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).addAsset(
 				BitmapCache_Balloons.BITMAP_ID_BALLOONS_YELLOW_PART_4,
 				BitmapUtils.fromResource(Application_Base.getInstance(), R.drawable.ic_balloon_yellow_step_3));
-		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).add(
+		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).addAsset(
 				BitmapCache_Balloons.BITMAP_ID_BALLOONS_YELLOW_PART_5,
 				BitmapUtils.fromResource(Application_Base.getInstance(), R.drawable.ic_balloon_yellow_step_4));
-		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).add(
+		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).addAsset(
 				BitmapCache_Balloons.BITMAP_ID_BALLOONS_YELLOW_PART_6,
 				BitmapUtils.fromResource(Application_Base.getInstance(), R.drawable.ic_balloon_yellow_step_5));
 
-		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).add(
+		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).addAsset(
 				BitmapCache_Balloons.BITMAP_ID_BALLOONS_ORANGE_PART_1,
 				BitmapUtils.fromResource(Application_Base.getInstance(), R.drawable.ic_balloon_orange_step_0));
-		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).add(
+		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).addAsset(
 				BitmapCache_Balloons.BITMAP_ID_BALLOONS_ORANGE_PART_2,
 				BitmapUtils.fromResource(Application_Base.getInstance(), R.drawable.ic_balloon_orange_step_1));
-		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).add(
+		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).addAsset(
 				BitmapCache_Balloons.BITMAP_ID_BALLOONS_ORANGE_PART_3,
 				BitmapUtils.fromResource(Application_Base.getInstance(), R.drawable.ic_balloon_orange_step_2));
-		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).add(
+		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).addAsset(
 				BitmapCache_Balloons.BITMAP_ID_BALLOONS_ORANGE_PART_4,
 				BitmapUtils.fromResource(Application_Base.getInstance(), R.drawable.ic_balloon_orange_step_3));
-		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).add(
+		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).addAsset(
 				BitmapCache_Balloons.BITMAP_ID_BALLOONS_ORANGE_PART_5,
 				BitmapUtils.fromResource(Application_Base.getInstance(), R.drawable.ic_balloon_orange_step_4));
-		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).add(
+		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).addAsset(
 				BitmapCache_Balloons.BITMAP_ID_BALLOONS_ORANGE_PART_6,
 				BitmapUtils.fromResource(Application_Base.getInstance(), R.drawable.ic_balloon_orange_step_5));
 
 
-		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).add(
+		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).addAsset(
 				BitmapCache_Balloons.BITMAP_ID_BALLOONS_ICON_GRADIENT_BLUE,
 				BitmapUtils.fromResource(Application_Base.getInstance(), R.drawable.ic_balloons_icon_gradient_blue));
-		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).add(
+		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).addAsset(
 				BitmapCache_Balloons.BITMAP_ID_BALLOONS_ICON_GRADIENT_GREEN,
 				BitmapUtils.fromResource(Application_Base.getInstance(), R.drawable.ic_balloons_icon_gradient_green));
-		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).add(
+		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).addAsset(
 				BitmapCache_Balloons.BITMAP_ID_BALLOONS_ICON_GRADIENT_PINK,
 				BitmapUtils.fromResource(Application_Base.getInstance(), R.drawable.ic_balloons_icon_gradient_pink));
 
-		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).add(
+		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).addAsset(
 				BitmapCache_Balloons.BITMAP_ID_BALLOONS_ICON_BRICKWALL_BLUE,
 				BitmapUtils.fromResource(Application_Base.getInstance(), R.drawable.ic_balloons_icon_brickwall_blue));
-		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).add(
+		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).addAsset(
 				BitmapCache_Balloons.BITMAP_ID_BALLOONS_ICON_BRICKWALL_GREEN,
 				BitmapUtils.fromResource(Application_Base.getInstance(), R.drawable.ic_balloons_icon_brickwall_green));
-		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).add(
+		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).addAsset(
 				BitmapCache_Balloons.BITMAP_ID_BALLOONS_ICON_BRICKWALL_RED,
 				BitmapUtils.fromResource(Application_Base.getInstance(), R.drawable.ic_balloons_icon_brickwall_red));
 
-		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).add(
+		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).addAsset(
 				BitmapCache_Balloons.BITMAP_ID_BALLOONS_ICON_FORTRESS,
 				BitmapUtils.fromResource(Application_Base.getInstance(), R.drawable.ic_balloons_icon_fortress_v5));
 
-		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).add(
+		//Backgrounds
+		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).addBackground(
 				BitmapCache_Balloons.BITMAP_ID_BALLOONS_BACKGROUND_GRADIENT_BLUE,
 				BitmapUtils.fromResource(Application_Base.getInstance(), R.drawable.ic_background_gradient_blue));
-		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).add(
+		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).addBackground(
 				BitmapCache_Balloons.BITMAP_ID_BALLOONS_BACKGROUND_GRADIENT_GREEN,
 				BitmapUtils.fromResource(Application_Base.getInstance(), R.drawable.ic_background_gradient_green));
-		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).add(
+		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).addBackground(
 				BitmapCache_Balloons.BITMAP_ID_BALLOONS_BACKGROUND_GRADIENT_PINK,
 				BitmapUtils.fromResource(Application_Base.getInstance(), R.drawable.ic_background_gradient_pink));
 
-		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).add(
+		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).addBackground(
 				BitmapCache_Balloons.BITMAP_ID_BALLOONS_BACKGROUND_BRICKWALL_BLUE,
 				BitmapUtils.fromResource(Application_Base.getInstance(), R.drawable.ic_background_brickwall_blue));
-		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).add(
+		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).addBackground(
 				BitmapCache_Balloons.BITMAP_ID_BALLOONS_BACKGROUND_BRICKWALL_GREEN,
 				BitmapUtils.fromResource(Application_Base.getInstance(), R.drawable.ic_background_brickwall_green));
-		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).add(
+		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).addBackground(
 				BitmapCache_Balloons.BITMAP_ID_BALLOONS_BACKGROUND_BRICKWALL_RED,
 				BitmapUtils.fromResource(Application_Base.getInstance(), R.drawable.ic_background_brickwall_red));
 
-		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).add(
+		BitmapCache_Balloons.STATIC.getInstance_Impl(BitmapCache_Balloons.BITMAP_ID_COMMON).addBackground(
 				BitmapCache_Balloons.BITMAP_ID_BALLOONS_BACKGROUND_FORTRESS,
 				BitmapUtils.fromResource(Application_Base.getInstance(), R.drawable.ic_background_fortress_v3));
 	}
