@@ -33,14 +33,14 @@ public class Entity2D_Challenger_StopTheBalls extends Entity2D_Challenger {
 		float dx = x_player - getEnvelop().left;
 		float dy = y_player - getEnvelop().top;
 
-		float dxy_normalizer = (float) Math.sqrt(dx * dx + dy * dy);
+		float dxy_normalizer = (float) Math.max(1, Math.sqrt(dx * dx + dy * dy));
 		float dx_norm = dx / dxy_normalizer;
 		float dy_norm = dy / dxy_normalizer;
 
 		float speed_x = dx_norm * speedMultiplier * _world.getMaxSpeed_CHALLENGER();
 		float speed_y = dy_norm * speedMultiplier * _world.getMaxSpeed_CHALLENGER();
 
-		if (Math.abs(speed_x) < 1 && Math.abs(speed_y) < 1) {
+		if (false && Math.abs(speed_x) < 1 && Math.abs(speed_y) < 1) {
 
 			throw new IllegalStateException("Math.abs(speed_x) <= 1 && Math.abs(speed_y) <= 1");
 		}
