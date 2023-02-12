@@ -5,7 +5,6 @@ import java.util.concurrent.ExecutorService;
 
 import org.metatrans.apps.balloons.model.GameData_StopTheBalls;
 import org.metatrans.commons.achievements.IAchievementsManager;
-import org.metatrans.commons.analytics.IAnalytics;
 import org.metatrans.commons.app.Application_Base;
 import org.metatrans.commons.cfg.achievements.IConfigurationAchievements;
 import org.metatrans.commons.events.EventsManager_Base;
@@ -24,9 +23,9 @@ public class EventsManager_StopTheBalls extends EventsManager_Base {
 	private IAchievementsManager achievementsManager;
 	
 	
-	public EventsManager_StopTheBalls(ExecutorService _executor, IAnalytics _analytics, IAchievementsManager _achievementsManager) {
+	public EventsManager_StopTheBalls(ExecutorService _executor, IAchievementsManager _achievementsManager) {
 		
-		super(_executor, _analytics);
+		super(_executor);
 		
 		achievementsManager = _achievementsManager;
 	}
