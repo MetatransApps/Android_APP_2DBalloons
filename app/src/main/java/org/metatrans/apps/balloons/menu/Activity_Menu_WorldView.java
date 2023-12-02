@@ -93,7 +93,9 @@ public class Activity_Menu_WorldView extends Activity_Base {
 		public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
 			//System.out.println("Selection POS=" + position + ", id=" + id);
-			
+
+			Application_Base.getInstance().getSFXManager().playSound(org.metatrans.commons.R.raw.sfx_button_pressed_2);
+
 			int currOrderNumber = ConfigurationUtils_WorldView.getOrderNumber(((UserSettings_StopTheBalls) Application_Base.getInstance().getUserSettings()).cfg_id_worldview);
 
 			if (position != currOrderNumber) {

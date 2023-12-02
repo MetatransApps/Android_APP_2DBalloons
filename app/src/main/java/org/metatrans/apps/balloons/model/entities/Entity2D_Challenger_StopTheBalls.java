@@ -3,6 +3,7 @@ package org.metatrans.apps.balloons.model.entities;
 
 import java.util.List;
 
+import org.metatrans.apps.balloons.lib.R;
 import org.metatrans.apps.balloons.model.BitmapCache_Balloons;
 import org.metatrans.apps.balloons.model.GameData_StopTheBalls;
 import org.metatrans.commons.app.Application_Base;
@@ -106,6 +107,8 @@ public class Entity2D_Challenger_StopTheBalls extends Entity2D_Challenger {
 		balloon_burst.setWorldSize(getWorld().get_WORLD_SIZE_X(), getWorld().get_WORLD_SIZE_Y());
 
 		getWorld().addEntity(balloon_burst);
+
+		Application_Base.getInstance().getSFXManager().playSound(R.raw.sfx_balloon_popping);
 	}
 
 

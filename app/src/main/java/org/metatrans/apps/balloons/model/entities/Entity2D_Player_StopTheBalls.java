@@ -6,6 +6,7 @@ import java.util.List;
 import org.metatrans.apps.balloons.app.Application_StopTheBalls;
 import org.metatrans.apps.balloons.cfg.world.ConfigurationUtils_Level;
 import org.metatrans.apps.balloons.cfg.world.IConfigurationWorld;
+import org.metatrans.apps.balloons.lib.R;
 import org.metatrans.apps.balloons.model.BitmapCache_Balloons;
 import org.metatrans.apps.balloons.model.GameData_StopTheBalls;
 import org.metatrans.apps.balloons.model.WorldGenerator_StopTheBalls;
@@ -14,6 +15,7 @@ import org.metatrans.commons.app.Application_Base;
 import org.metatrans.commons.graphics2d.app.Application_2D_Base;
 import org.metatrans.commons.graphics2d.model.GameData;
 import org.metatrans.commons.graphics2d.model.World;
+import org.metatrans.commons.graphics2d.model.entities.Entity2D_Moving;
 import org.metatrans.commons.graphics2d.model.entities.Entity2D_Player;
 import org.metatrans.commons.graphics2d.model.entities.IEntity2D;
 import org.metatrans.commons.model.LevelResult_Base;
@@ -153,6 +155,8 @@ public class Entity2D_Player_StopTheBalls extends Entity2D_Player {
 
 			//Application_Base_Ads.getInstance().openInterstitial();
 
+			Application_Base.getInstance().getSFXManager().playSound(R.raw.sfx_level_completed);
+
 		} else {
 
 			if (getGameData().count_lives <= 0) {
@@ -160,6 +164,8 @@ public class Entity2D_Player_StopTheBalls extends Entity2D_Player {
 				killedFinal();
 
 				getGameData().count_lives = 0;
+
+				Application_Base.getInstance().getSFXManager().playSound(R.raw.sfx_game_over);
 			}
 		}
 	}

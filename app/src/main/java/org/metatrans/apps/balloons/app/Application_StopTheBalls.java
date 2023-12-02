@@ -6,6 +6,7 @@ import org.metatrans.apps.balloons.cfg.world.ConfigurationUtils_Level;
 import org.metatrans.apps.balloons.cfg.world.IConfigurationWorld;
 import org.metatrans.apps.balloons.events.EventsManager_StopTheBalls;
 import org.metatrans.apps.balloons.lib.BuildConfig;
+import org.metatrans.apps.balloons.lib.R;
 import org.metatrans.apps.balloons.main.Activity_Result;
 import org.metatrans.apps.balloons.model.BitmapCache_Balloons;
 import org.metatrans.apps.balloons.model.GameData_StopTheBalls;
@@ -34,6 +35,19 @@ public abstract class Application_StopTheBalls extends Application_2D_Base {
 	public void onCreate() {
 
 		ConfigurationUtils_Level.createInstance();
+
+		getSFXManager().loadSounds(this,
+				new int[] {
+					org.metatrans.commons.R.raw.sfx_button_pressed_1,
+					org.metatrans.commons.R.raw.sfx_button_pressed_2,
+					org.metatrans.commons.R.raw.sfx_button_pressed_3,
+					R.raw.sfx_new_game,
+					R.raw.sfx_game_over,
+					R.raw.sfx_level_completed,
+					R.raw.sfx_arrow,
+					R.raw.sfx_balloon_popping
+				}
+		);
 
 		super.onCreate();
 		//Called when the application is starting, before any other application objects have been created.
@@ -104,7 +118,9 @@ public abstract class Application_StopTheBalls extends Application_2D_Base {
 		//result.world.
 		
 		result.timestamp_lastborn = System.currentTimeMillis();
-		
+
+		Application_Base.getInstance().getSFXManager().playSound(R.raw.sfx_new_game);
+
 		return result;
 	}
 	

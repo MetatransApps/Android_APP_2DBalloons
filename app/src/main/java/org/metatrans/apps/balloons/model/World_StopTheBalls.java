@@ -6,6 +6,7 @@ import java.util.List;
 
 import org.metatrans.apps.balloons.cfg.world.ConfigurationUtils_Level;
 import org.metatrans.apps.balloons.cfg.world.IConfigurationWorld;
+import org.metatrans.apps.balloons.lib.R;
 import org.metatrans.apps.balloons.model.entities.Entity2D_Bullet_StopTheBalls;
 import org.metatrans.apps.balloons.model.entities.Entity2D_Challenger_StopTheBalls;
 import org.metatrans.apps.balloons.model.entities.Entity2D_Player_StopTheBalls;
@@ -141,6 +142,8 @@ public class World_StopTheBalls extends World {
 					addEntity(loaded_bulletEntity);
 
 					loaded_bulletEntity = null;
+
+					Application_Base.getInstance().getSFXManager().playSound(R.raw.sfx_arrow);
 				}
 			}
 
