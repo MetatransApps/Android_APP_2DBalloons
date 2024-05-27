@@ -40,7 +40,7 @@ public class WorldGenerator_StopTheBalls {
 
 		float spaceScaleFactor = cfg_world.getSpaceMultiplier();
 
-		int[] screen_size = ScreenUtils.getScreenSize(activity);
+		int[] screen_size = ScreenUtils.getScreenSize();
 		int main_width = Math.max(screen_size[0], screen_size[1]);
 		int main_height = Math.min(screen_size[0], screen_size[1]);
 
