@@ -57,7 +57,7 @@ public class View_Main_StopTheBalls extends View_Main_Base {
 		float extend_factor_bullets = 1.1f;
 		float extend_factor_steps 	= 1.35f;
 		
-		int[] screen_size = ScreenUtils.getScreenSize();
+		int[] screen_size = ScreenUtils.getScreenSize(activity);
 		int screen_width = Math.max(screen_size[0], screen_size[1]);
 		int start_x = (int) ((screen_width - 5 * interval_x - 4 * width - extend_factor_bullets * width - extend_factor_steps * width) / 2f);
 		
